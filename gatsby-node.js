@@ -1,7 +1,48 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions
+
+  const projectTemplate = require.resolve("../src/templates/project-detail.js")
+
+  return await graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            html
+            frontmatter {
+              title
+              technologies
+              siteURL
+              shortDescription
+              path
+              githubRepo
+              mainImage {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    }
+  `).then(res => {
+      if(res.errors){
+          return Promise.reject("response",res.errors)
+      }
+
+      console.log("data", res.data)
+
+      res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          createPage({
+              path: node.frontmatter.path,
+              component: projectTemplate
+          })
+      })
+  })
+}

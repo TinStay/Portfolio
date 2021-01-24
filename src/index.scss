@@ -49,13 +49,21 @@ header {
 }
 
 .nav-item {
-  margin: 2px 50px 0px 50px;
+  margin: 2px auto 0px auto;
   padding: 7px 0;
   font-size: 1rem;
   font-weight: bold;
   list-style: none;
   border-bottom: 3px solid transparent;
   color: $dark-blue-font !important;
+  width: 40%;
+  text-align: center;
+  text-decoration: none;
+
+
+  @media screen and (min-width: 992px) {
+    margin: 2px 50px 0px 50px;
+  }
 
   &:hover {
     transition: 0.1s ease-in-out;
@@ -81,7 +89,8 @@ header {
   color: inherit !important;
 }
 
-.active {
+.active-link {
+  
   background: $dark-purple-main; /* Default color */
   background: -webkit-linear-gradient(
     to right,

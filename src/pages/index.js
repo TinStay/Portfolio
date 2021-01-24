@@ -10,7 +10,7 @@ const IndexPage = () => {
       image: file(relativePath: { eq: "tinstay.jpg" }) {
         id
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
           fixed {
@@ -31,7 +31,7 @@ const IndexPage = () => {
           <div className="row">
             <div className="col-lg-6 order-lg-2 px-0">
               <div className="profile-image-circle ">
-                <Img className="profile-image" fluid={data.image.childImageSharp.fluid} alt="Tin Stay image"/>
+                <Img className="profile-image" fluid={data.image.childImageSharp.fluid} alt="Tin Stay"/>
               </div>
             </div>
             <div className="main-text col-lg-6 order-lg-1 px-0">

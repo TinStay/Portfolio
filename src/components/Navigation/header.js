@@ -14,23 +14,17 @@ const Header = ({ siteTitle }) => (
       <Navbar.Toggle aria-controls="navbar-main " />
       <Navbar.Collapse  id="navbar-main ">
         <Nav className="ms-auto ">
-          <li className="nav-item ">
-            <Link className="nav-link" to="/">
-              About me
+            <Link className="nav-item" to="/" activeClassName="active-link">
+              <span className="nav-link">About</span>
             </Link>
-          </li>
 
-          <li className="nav-item">
-            <Link className="nav-link" to="/projects/">
-              Projects
+            <Link className="nav-item" to="/projects/" activeClassName="active-link">
+              <span className="nav-link">Projects</span>
             </Link>
-          </li>
 
-          <li className="nav-item">
-            <Link className="nav-link" to="/contact/">
-              Contact me
+            <Link className="nav-item" to="/contact/" activeClassName="active-link">
+              <span className="nav-link">Contact</span>
             </Link>
-          </li>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
