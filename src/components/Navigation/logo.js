@@ -27,9 +27,9 @@ const Logo = () => {
   `)
 
   const logoStyle={
-        width: '55px',
-    height: '55px',
-    margin: '0',
+    width: '62px',
+    height: '62px',
+    margin: '0 0',
   }
 
   if (!data?.placeholderImage?.childImageSharp?.fluid) {

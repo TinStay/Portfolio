@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 .blue-font {
   color: blue;
@@ -32,13 +32,16 @@ header {
 }
 
 .navbar {
-  width: 80%;
-  margin: 5px auto 0 auto;
-}
+  width: 96%;
+  margin: 0 auto 0 auto;
 
+  @media screen and (min-width: 768px) {
+    width: 70%;
+  }
 
-.navbar-nav {
-  height: inherit;
+  @media screen and (min-width: 992px) {
+    // width: 76%;
+  }
 }
 
 .nav-items {
@@ -99,14 +102,43 @@ header {
 /* ### Common classes ### */
 /* ##################### */
 
-.centered-container-80 {
+.w-70-centered {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.w-lg-70-centered {
+  width: 96%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 992px) {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.w-80-centered {
   width: 80%;
   margin: 0 auto;
 }
 
-.centered-container-90 {
+.w-lg-80-centered {
+  @media screen and (min-width: 992px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.w-90-centered {
   width: 90%;
   margin: 0 auto;
+}
+
+.w-lg-90-centered {
+  @media screen and (min-width: 992px) {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .diplay-flex {
@@ -122,10 +154,6 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 50px;
-}
-
-.w-100 {
-  width: 100%;
 }
 
 .light-gray-container {
@@ -159,8 +187,12 @@ header {
 /* ### Home page ### */
 /* ##################### */
 .main-text {
-  margin: 1.8rem auto 3rem auto;
-  /* text-align: center; */
+  text-align: center;
+  margin: 10px auto;
+
+  @media screen and (min-width: 992px) {
+    margin: 1.8rem auto 3rem auto;
+  }
 }
 
 .heading-middle {
@@ -172,11 +204,15 @@ header {
 }
 
 .heading-small {
-  /* display: inline-block; */
-  font-size: 1.7rem;
+  margin: 15px 0;
+  font-size: 1.3rem;
   font-weight: 600;
-  margin: 17px 0 0 0;
   color: $dark-blue-font;
+
+  @media screen and (min-width: 992px) {
+    font-size: 1.7rem;
+    margin: 17px 0 0 0;
+  }
 }
 
 .heading-smaller {
@@ -187,11 +223,10 @@ header {
 }
 
 .heading-tin-stay {
-  /* display: inline-block; */
-  font-size: 5rem;
-  margin: 0px;
-  width: 500px;
-  height: 140px;
+  width: inherit;
+  height: inherit;
+  font-size: 3.4rem;
+  margin: 0 0 20px 0;
   font-family: $header-font-family;
   font-style: italic;
   font-weight: bolder;
@@ -212,6 +247,13 @@ header {
   ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media screen and (min-width: 992px) {
+    margin: 0px;
+    font-size: 5rem;
+    width: 500px;
+    height: 140px;
+  }
 }
 
 .jumbotron-buttons {
@@ -219,13 +261,12 @@ header {
 }
 
 .btn-jumbotron-full {
-  margin-right: 20px;
-  padding: 15px 35px;
+  padding: 10px 27px;
+  margin: auto 10px auto 0;
   border: $dark-purple-main;
   color: white;
   font-weight: 600;
   font-size: 1rem;
-  /* border: 3px solid $dark-purple-main; */
   border-radius: 40px;
   text-decoration: none;
 
@@ -240,10 +281,31 @@ header {
     $dark-purple-main,
     $light-purple-main
   ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  &:hover {
+    color: white;
+    background: $dark-purple-main-hover; /* Default color */
+    background: -webkit-linear-gradient(
+      to right,
+      $dark-purple-main-hover,
+      $light-purple-main-hover
+    ); /* Color for supporter browsers: Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      $dark-purple-main-hover,
+      $light-purple-main-hover
+    ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-right: 20px;
+    padding: 15px 35px;
+  }
 }
 
 .btn-jumbotron {
-  padding: 12px 35px;
+  padding: 7px 27px;
+  margin: auto 0;
   border: 3px solid $light-purple-main;
   border-radius: 40px;
   background-color: transparent;
@@ -251,13 +313,19 @@ header {
   font-weight: 600;
   color: $light-purple-main;
   text-decoration: none;
+
+  @media screen and (min-width: 992px) {
+    padding: 12px 35px;
+  }
 }
 
 .profile-image-circle {
-  margin: 3rem auto 0 auto;
-  /* padding: 8px 20px 24px 6px; */
-  width: 365px;
-  height: 335px;
+  margin: 0rem auto 0 auto;
+  width: 160px;
+  height: 145px;
+
+  padding: 2px 2px;
+
   border-radius: 50%;
   background-size: cover;
   background: $dark-purple-main; /* Default color */
@@ -274,68 +342,49 @@ header {
 
   -webkit-box-shadow: 1px 5px 15px 5px rgb(199, 199, 199);
   box-shadow: 1px 5px 15px 5px rgb(199, 199, 199);
+
+  @media screen and (min-width: 992px) {
+    margin: 3rem auto 0 auto;
+    width: 315px;
+    height: 285px;
+  }
+
+  @media screen and (min-width: 1199px) {
+    width: 365px;
+    height: 335px;
+  }
 }
 
 .profile-image {
+  width: 160px;
+  height: 145px;
   padding: 4px;
-  width: inherit;
-  height: inherit;
+
   border-radius: 50%;
   background-size: cover;
+
+  @media screen and (min-width: 992px) {
+    width: inherit;
+    height: inherit;
+  }
+
+  @media screen and (min-width: 1199px) {
+  }
 }
 
 @media only screen and (max-width: 1199px) {
   .light-gray-container {
     padding: 1rem 0 8rem 0;
   }
-  .main-text {
-    text-align: center;
-    margin: 10px auto;
-  }
 
   .heading-middle {
     font-size: 1.6rem;
-  }
-
-  .heading-small {
-    margin: 15px 0;
-    font-size: 1.3rem;
-  }
-
-  .heading-tin-stay {
-    width: inherit;
-    height: inherit;
-    font-size: 3.4rem;
-    margin: 0 0 20px 0;
   }
 
   .jumbotron-buttons {
     display: flex;
     justify-content: space-around;
     margin: 3rem 0;
-  }
-
-  .btn-jumbotron {
-    padding: 7px 27px;
-    margin: auto 0;
-    /* margin-right: 10px; */
-  }
-
-  .btn-jumbotron-full {
-    padding: 10px 27px;
-    margin: auto 0;
-    /* margin-right: 10px; */
-  }
-
-  .profile-image-circle {
-    margin: 0rem auto 0 auto;
-    width: 160px;
-    height: 145px;
-  }
-  .profile-image {
-    margin: 0rem auto 0 auto;
-    width: 160px;
-    height: 145px;
   }
 }
 
