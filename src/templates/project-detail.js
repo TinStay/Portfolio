@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 
 const ProjectDetail = ({ data }) => {
   const project = data.markdownRemark
+  const images = data ? data.allFile.edges : []
 
   console.log("data", data)
 
@@ -36,11 +37,20 @@ const ProjectDetail = ({ data }) => {
             <div className="project-detail-desc">
               <h3 className="heading-smaller">Process</h3>
               <div className="purple-gradient-border-bottom"></div>
-              <p className="project-detail-desc-text">
-                I decided to write about product recommendations which websites
-                use nowadays to collect and display more relevant advertisements
-                and Google Maps directions and routing.
-              </p>
+              {images.length > 0 &&
+                images.map(image => {
+                  if (image.node.childImageSharp !== null) {
+                    return (
+                      <Img
+                        className="project-card-image"
+                        fluid={image.node.childImageSharp.fluid}
+                        alt="project"
+                      />
+                    )
+                  }else{
+                    return null
+                  }
+                })}
             </div>
           </div>
         </div>
@@ -50,7 +60,7 @@ const ProjectDetail = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query ProjectDetailByPath($path: String!) {
+  query ProjectDetailByPath($path: String!, $title: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -61,6 +71,17 @@ export const pageQuery = graphql`
         technologies
         shortDescription
         mainImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    allFile(filter: { relativeDirectory: { eq: $title } }) {
+      edges {
+        node {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
