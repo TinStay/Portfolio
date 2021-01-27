@@ -1,6 +1,8 @@
 import React from "react"
-import SEO from '../components/seo'
+import SEO from "../components/seo"
+import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 
 const ProjectDetail = ({ data }) => {
   const project = data.markdownRemark
@@ -8,7 +10,7 @@ const ProjectDetail = ({ data }) => {
   console.log("data", data)
 
   return (
-    <div>
+    <Layout>
       {/* <SEO title={project.frontmatter.title} /> */}
 
       <div className="light-gray-container">
@@ -17,6 +19,11 @@ const ProjectDetail = ({ data }) => {
             {project.frontmatter.title}
           </h1>
           <h3 className="heading-smaller">Week 1</h3>
+          <Img
+            className="project-card-image"
+            fluid={project.frontmatter.mainImage.childImageSharp.fluid}
+            alt="project"
+          />
           <div className="two-column-grid ">
             <div className="project-detail-desc">
               <h3 className="heading-smaller">Description</h3>
@@ -38,7 +45,7 @@ const ProjectDetail = ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 

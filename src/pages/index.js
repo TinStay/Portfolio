@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query mainImage{
+    query tinstayImage{
       image: file(relativePath: { eq: "tinstay.jpg" }) {
         id
         childImageSharp {

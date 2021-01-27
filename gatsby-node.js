@@ -2,7 +2,7 @@
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const projectTemplate = require.resolve("../src/templates/project-detail.js")
+  const projectTemplate = require.resolve('./src/templates/project-detail.js')
 
   return await graphql(`
     {
@@ -18,13 +18,7 @@ exports.createPages = async ({ actions, graphql }) => {
               shortDescription
               path
               githubRepo
-              mainImage {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
+              
             }
             
           }
