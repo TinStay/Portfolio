@@ -1,4 +1,5 @@
 import React from "react"
+import { Carousel } from "react-bootstrap"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
@@ -8,25 +9,47 @@ const ProjectDetail = ({ data }) => {
   const project = data.markdownRemark
   const images = data ? data.allFile.edges : []
 
-  console.log("data", data)
-
   return (
     <Layout>
       {/* <SEO title={project.frontmatter.title} /> */}
 
       <div className="light-gray-container">
-        <div className="project-detail-container centered-container-80">
+        <div className="project-detail-container w-90-centered">
           <h1 className="heading-project-detail">
             {project.frontmatter.title}
           </h1>
-          <h3 className="heading-smaller">Week 1</h3>
-          <Img
+          <h3 className="heading-smaller">{project.frontmatter.shortDescription}</h3>
+          {/* <Img
             className="project-card-image"
             fluid={project.frontmatter.mainImage.childImageSharp.fluid}
             alt="project"
-          />
-          <div className="two-column-grid ">
-            <div className="project-detail-desc">
+          /> */}
+          <Carousel
+            className="carousel-container"
+            fade={true}
+            indicators={false}
+            nextLabel=""
+            prevLabel=""
+          >
+            {images.length > 0 &&
+              images.map(image => {
+                if (image.node.childImageSharp !== null) {
+                  return (
+                    <Carousel.Item>
+                      <Img
+                        className="carousel-image"
+                        fluid={image.node.childImageSharp.fluid}
+                        alt="website"
+                      />
+                    </Carousel.Item>
+                  )
+                } else {
+                  return null
+                }
+              })}
+          </Carousel>
+          <div className="row ">
+            <div className="project-detail-desc col-lg-6">
               <h3 className="heading-smaller">Description</h3>
               <div className="purple-gradient-border-bottom"></div>
               <div
@@ -34,23 +57,12 @@ const ProjectDetail = ({ data }) => {
                 className="project-detail-desc-text"
               ></div>
             </div>
-            <div className="project-detail-desc">
+            <div className="project-detail-desc col-lg-6">
               <h3 className="heading-smaller">Process</h3>
               <div className="purple-gradient-border-bottom"></div>
-              {images.length > 0 &&
-                images.map(image => {
-                  if (image.node.childImageSharp !== null) {
-                    return (
-                      <Img
-                        className="project-card-image"
-                        fluid={image.node.childImageSharp.fluid}
-                        alt="project"
-                      />
-                    )
-                  }else{
-                    return null
-                  }
-                })}
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, quia
+              fuga. Voluptates nulla reprehenderit architecto eveniet nesciunt
+              praesentium, quia ducimus?
             </div>
           </div>
         </div>
