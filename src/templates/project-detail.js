@@ -14,16 +14,23 @@ const ProjectDetail = ({ data }) => {
       {/* <SEO title={project.frontmatter.title} /> */}
 
       <div className="light-gray-container">
-        <div className="project-detail-container w-90-centered">
-          <h1 className="heading-project-detail">
-            {project.frontmatter.title}
-          </h1>
-          <h3 className="heading-smaller">{project.frontmatter.shortDescription}</h3>
-          {/* <Img
-            className="project-card-image"
-            fluid={project.frontmatter.mainImage.childImageSharp.fluid}
-            alt="project"
-          /> */}
+        <div className="project-detail-container w-90-centered ">
+          <div className="d-md-flex justify-content-between mb-4 w-100">
+            <h1 className="heading-project-detail">
+              {project.frontmatter.title}
+            </h1>
+            {project.frontmatter.siteURL != "none" ? (
+              <div className="my-4 my-md-auto">
+                <a
+                  href={project.frontmatter.siteURL}
+                  target="_blank"
+                  className="btn-jumbotron-full mx-0 "
+                >
+                  Visit website
+                </a>
+              </div>
+            ) : null}
+          </div>
           <Carousel
             className="carousel-container"
             fade={true}
