@@ -14,9 +14,9 @@ const ProjectDetail = ({ data }) => {
       {/* <SEO title={project.frontmatter.title} /> */}
 
       <div className="light-gray-container">
-        <div class="w-90-centered">
+        <div className="w-80-centered">
           <Link className="btn-go-back text-decoration-none" to="/projects">
-            <i className="fas fa-angle-left me-1"></i>Go back
+            <i className="fas fa-angle-left mb-2 me-1"></i>Go back
           </Link>
 
           <div className="project-detail-container ">

@@ -10,7 +10,7 @@ const IndexPage = () => {
       image: file(relativePath: { eq: "tinstay.jpg" }) {
         id
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
           fixed {
@@ -21,7 +21,6 @@ const IndexPage = () => {
     }
   `)
 
-  console.log(data)
 
   return (
     <Layout>
