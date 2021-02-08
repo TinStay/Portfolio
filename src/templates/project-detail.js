@@ -15,6 +15,8 @@ const ProjectDetail = ({ data }) => {
   const project = data.markdownRemark
   const images = data ? data.allFile.edges : []
 
+  console.log("project.frontmatter.learningOutcome", project.frontmatter)
+
   return (
     <Layout>
       <div className="light-gray-container">
@@ -99,11 +101,7 @@ const ProjectDetail = ({ data }) => {
                   <h3 className="heading-smaller">Learning outcome</h3>
                   <div className="purple-gradient-border-bottom mb-3"></div>
                 </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-                  mollitia dolores, non obcaecati soluta fuga error iure
-                  perferendis reprehenderit quod.
-                </p>
+                <p>{project.frontmatter.learningOutcome}</p>
               </div>
               <div className="col-xl-4">
                 <div>
@@ -136,6 +134,7 @@ export const pageQuery = graphql`
         siteURL
         githubRepo
         technologies
+        learningOutcome
         shortDescription
         mainImage {
           childImageSharp {
