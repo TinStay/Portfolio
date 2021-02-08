@@ -3,7 +3,7 @@ title: "AlgoVisual"
 path: "/algovisual"
 siteURL: "https://algovisual-tinstay.web.app/"
 githubRepo: "https://github.com/TinStay/AlgoVisual"
-technologies: ["React", "Sass", "Bootstrap", "JS"]
+technologies: ["React", "Sass", "Bootstrap", "Javascript"]
 shortDescription: "Learn how different sorting algorithms work and perform."
 mainImage: "./images/algoMain.png"
 ---

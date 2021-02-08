@@ -39,7 +39,7 @@ const Projects = ({ data }) => {
                         {project.node.frontmatter.shortDescription}
                       </p>
                       <Link
-                        className=" btn btn-purple-rounded my-2 text-center"
+                        className="btn btn-purple-rounded py-1 px-3 my-2 text-center"
                         to={project.node.frontmatter.path}
                       >
                         View more

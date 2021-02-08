@@ -5,6 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `@react-icons/all-files`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-catch-links",
