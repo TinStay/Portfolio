@@ -4,7 +4,7 @@
   color: blue;
 }
 
-.btn-purple-rounded{
+.btn-purple-rounded {
   border-radius: 50px;
   color: white;
   background: $dark-purple-main; /* Default color */
@@ -33,7 +33,6 @@
       $light-purple-main-hover
     ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
-
 }
 
 .text-decoration-none {
@@ -46,6 +45,11 @@
 
 .dark-blue-font {
   color: $dark-blue-font;
+}
+
+.row .equal {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 html {
@@ -92,7 +96,6 @@ header {
   text-align: center;
   text-decoration: none;
 
-
   @media screen and (min-width: 992px) {
     margin: 2px 50px 0px 50px;
   }
@@ -122,7 +125,6 @@ header {
 }
 
 .active-link {
-  
   background: $dark-purple-main; /* Default color */
   background: -webkit-linear-gradient(
     to right,
@@ -164,6 +166,8 @@ header {
 }
 
 .w-lg-80-centered {
+  width: 96%;
+  margin: 0 auto;
   @media screen and (min-width: 992px) {
     width: 80%;
     margin: 0 auto;
@@ -448,9 +452,8 @@ header {
 }
 
 .project-card {
-  // margin: 0 10px;
-  /* width: 30%; */
-  min-height: 380px;
+  height: 100%;
+  // min-height: 380px;
   background-color: white;
   border-radius: 7px 7px; /* bottom side */
   border-bottom: 5px solid $light-purple-main;
@@ -458,13 +461,13 @@ header {
   border-left: 1px solid rgb(233, 233, 233);
   border-right: 1px solid rgb(233, 233, 233);
 
-  &-purple-bgc{
+  &-purple-bgc {
     background-color: $light-purple-main;
     border-radius: 7px 7px 0 0;
-  // border-bottom: 5px solid $light-purple-main;
-  // border-top: 1px solid rgb(233, 233, 233);
-  // border-left: 1px solid rgb(233, 233, 233);
-  // border-right: 1px solid rgb(233, 233, 233);
+    // border-bottom: 5px solid $light-purple-main;
+    // border-top: 1px solid rgb(233, 233, 233);
+    // border-left: 1px solid rgb(233, 233, 233);
+    // border-right: 1px solid rgb(233, 233, 233);
   }
 }
 
@@ -476,7 +479,7 @@ header {
   border-bottom: 1px solid rgb(233, 233, 233);
   transition: all 0.1s ease-in-out;
 
-  &:hover{
+  &:hover {
     opacity: 0.98;
     // backdrop-filter: blur(1px) ;
     // -webkit-filter: blur(1px);
@@ -485,7 +488,7 @@ header {
 
 .project-card-body {
   margin-top: 0;
-  padding: 0px 10px 15px 10px;
+  padding: 0px 10px 0px 10px;
   /* border-radius: 0 0 7px 7px; bottom side */
   color: $dark-blue-font;
 }
@@ -523,7 +526,7 @@ header {
 .project-detail-desc {
   margin: 50px 0px 50px 0;
 
-  .tech-icon{
+  .tech-icon {
     // margin-right: 15px;
     font-size: 3.2rem;
 
@@ -542,15 +545,15 @@ header {
   height: 500px;
 }
 
-.btn-go-back{
+.btn-go-back {
   color: $dark-blue-font;
   font-size: 0.9rem;
 }
 
-.carousel-container{
+.carousel-container {
   margin: 1rem auto;
 
-  .carousel-image{
+  .carousel-image {
     width: 100%;
     height: 100%;
     border-radius: 7px; /* top side */
@@ -558,8 +561,6 @@ header {
     border-bottom: 1px solid rgb(233, 233, 233);
   }
 }
-
-
 
 /* ##################### */
 /* ### Contact me page ### */

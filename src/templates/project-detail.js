@@ -15,23 +15,10 @@ const ProjectDetail = ({ data }) => {
   const project = data.markdownRemark
   const images = data ? data.allFile.edges : []
 
-  // const iconList = []
-
-  // project.frontmatter.technologies.map(technology => {
-  //   switch(technology){
-  //     case "React":
-  //       iconList.push()
-  //     break;
-  //   }
-  // })
-
-  // console.log("iconList",iconList)
   return (
     <Layout>
-      {/* <SEO title={project.frontmatter.title} /> */}
-
       <div className="light-gray-container">
-        <div className="w-80-centered">
+        <div className="w-lg-80-centered">
           <Link className="btn-go-back text-decoration-none" to="/projects">
             <i className="fas fa-angle-left mb-2 me-1"></i>Go back
           </Link>
@@ -62,10 +49,10 @@ const ProjectDetail = ({ data }) => {
               prevLabel=""
             >
               {images.length > 0 &&
-                images.map(image => {
+                images.map((image, idx) => {
                   if (image.node.childImageSharp !== null) {
                     return (
-                      <Carousel.Item>
+                      <Carousel.Item key={idx}>
                         <Img
                           className="carousel-image"
                           fluid={image.node.childImageSharp.fluid}
@@ -81,7 +68,7 @@ const ProjectDetail = ({ data }) => {
             <div className="row ">
               <div className="project-detail-desc col-xl-8">
                 <h3 className="heading-smaller ">Description</h3>
-                <div className="purple-gradient-border-bottom mb-2"></div>
+                <div className="purple-gradient-border-bottom mb-3"></div>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: project !== null && project.html,
@@ -91,16 +78,45 @@ const ProjectDetail = ({ data }) => {
               </div>
               <div className="project-detail-desc col-xl-4">
                 <h3 className="heading-smaller">Tech Stack</h3>
-                <div className="purple-gradient-border-bottom mb-2"></div>
+                <div className="purple-gradient-border-bottom mb-3"></div>
                 <div className="row">
-                  {project.frontmatter.technologies.map(technology => {
+                  {project.frontmatter.technologies.map((technology, idx) => {
                     return (
-                      <div className="col-4 col-md-3 col-xl-4 text-center">
+                      <div
+                        key={idx}
+                        className="col-4 col-md-3 col-xl-4 text-center"
+                      >
                         <Icon name={technology} />
                       </div>
                     )
                   })}
                 </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xl-8">
+                <div>
+                  <h3 className="heading-smaller">Learning outcome</h3>
+                  <div className="purple-gradient-border-bottom mb-3"></div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+                  mollitia dolores, non obcaecati soluta fuga error iure
+                  perferendis reprehenderit quod.
+                </p>
+              </div>
+              <div className="col-xl-4">
+                <div>
+                  <h3 className="heading-smaller">Github repository</h3>
+                  <div className="purple-gradient-border-bottom mb-3"></div>
+                </div>
+                <a
+                  className="btn-purple-rounded d-block d-lg-inline d-xl-block text-center text-decoration-none py-2 px-4 "
+                  target="_blank"
+                  href={project.frontmatter.githubRepo}
+                >
+                  View code
+                </a>
               </div>
             </div>
           </div>
