@@ -166,7 +166,7 @@ header {
 }
 
 .w-lg-80-centered {
-  width: 96%;
+  width: 90%;
   margin: 0 auto;
   @media screen and (min-width: 992px) {
     width: 80%;
@@ -202,14 +202,14 @@ header {
 }
 
 .light-gray-container {
-  /* height: 100vh; */
+  height: 90vh;
   background-color: $light-gray-bgc;
   padding: 1.8rem 0 8rem 0;
 }
 
 .purple-gradient-border-bottom {
-  margin: 7px 0;
-  height: 3px;
+  margin: 14px 0;
+  height: 4px;
   border-radius: 5px;
   background: $dark-purple-main; /* Default color */
   background: -webkit-linear-gradient(
@@ -231,12 +231,13 @@ header {
 /* ##################### */
 /* ### Home page ### */
 /* ##################### */
+
 .main-text {
   text-align: center;
-  margin: 10px auto;
+  margin: 5% auto 5% auto;
 
   @media screen and (min-width: 992px) {
-    margin: 1.8rem auto 3rem auto;
+    // margin: 10% auto 0 auto;
   }
 }
 
@@ -271,9 +272,9 @@ header {
   width: inherit;
   height: inherit;
   font-size: 3.4rem;
-  margin: 0 0 20px 0;
+  margin: 0 0 0px 0;
   font-family: $header-font-family;
-  font-style: italic;
+  // font-style: italic;
   font-weight: bolder;
   letter-spacing: 3px;
   color: $dark-blue-font;
@@ -294,6 +295,13 @@ header {
   -webkit-text-fill-color: transparent;
 
   @media screen and (min-width: 992px) {
+    margin: 0px;
+    font-size: 4.3rem;
+    width: 400px;
+    height: 140px;
+  }
+
+  @media screen and (min-width: 1199px) {
     margin: 0px;
     font-size: 5rem;
     width: 500px;
@@ -364,8 +372,16 @@ header {
   }
 }
 
+.profile-image-container{
+  margin: 5% auto 0 auto;
+
+  @media screen and (min-width: 992px) {
+    // margin: 10% auto 0 auto;
+  }
+}
+
 .profile-image-circle {
-  margin: 0rem auto 0 auto;
+  margin: 0 auto;
   width: 160px;
   height: 145px;
 
@@ -389,7 +405,6 @@ header {
   box-shadow: 1px 5px 15px 5px rgb(199, 199, 199);
 
   @media screen and (min-width: 992px) {
-    margin: 3rem auto 0 auto;
     width: 315px;
     height: 285px;
   }
@@ -526,13 +541,14 @@ header {
 .project-detail-desc {
   margin: 50px 0px 50px 0;
 
-  .tech-icon {
-    // margin-right: 15px;
-    font-size: 3.2rem;
+}
 
-    @media screen and (min-width: 992px) {
-      font-size: 4rem;
-    }
+.tech-icon {
+  // margin-right: 15px;
+  font-size: 3.2rem;
+
+  @media screen and (min-width: 992px) {
+    font-size: 4rem;
   }
 }
 

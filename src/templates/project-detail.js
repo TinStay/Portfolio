@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import Icon from "./Icon"
+import Icon from "../components/Icon"
 
 // import { ReactIcon } from "@react-icons/all-files/fa/FaReact";
 // import { SassIcon } from "@react-icons/all-files/fa/FaSass";
@@ -70,7 +70,7 @@ const ProjectDetail = ({ data }) => {
             <div className="row ">
               <div className="project-detail-desc col-xl-8">
                 <h3 className="heading-smaller ">Description</h3>
-                <div className="purple-gradient-border-bottom mb-3"></div>
+                <div className="purple-gradient-border-bottom"></div>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: project !== null && project.html,
@@ -80,7 +80,7 @@ const ProjectDetail = ({ data }) => {
               </div>
               <div className="project-detail-desc col-xl-4">
                 <h3 className="heading-smaller">Tech Stack</h3>
-                <div className="purple-gradient-border-bottom mb-3"></div>
+                <div className="purple-gradient-border-bottom"></div>
                 <div className="row">
                   {project.frontmatter.technologies.map((technology, idx) => {
                     return (
@@ -97,16 +97,14 @@ const ProjectDetail = ({ data }) => {
             </div>
             <div className="row">
               <div className="col-xl-8">
-                <div>
-                  <h3 className="heading-smaller">Learning outcome</h3>
-                  <div className="purple-gradient-border-bottom mb-3"></div>
-                </div>
+                <h3 className="heading-smaller">Learning outcome</h3>
+                <div className="purple-gradient-border-bottom"></div>
                 <p>{project.frontmatter.learningOutcome}</p>
               </div>
               <div className="col-xl-4">
                 <div>
                   <h3 className="heading-smaller">Github repository</h3>
-                  <div className="purple-gradient-border-bottom mb-3"></div>
+                  <div className="purple-gradient-border-bottom"></div>
                 </div>
                 <a
                   className="btn-purple-rounded d-block d-lg-inline d-xl-block text-center text-decoration-none py-2 px-4 "
