@@ -79,10 +79,10 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <div className="skills-container py-4">
+      <div className="skills-container">
         <div className="w-70-centered">
           <h1 className="heading-section text-center">My skills</h1>
-          <div className="row mb-5">
+          <div className="row mb-6">
             <h3 className="heading-smaller">Front-end</h3>
             <div className="purple-gradient-border-bottom mb-3"></div>
             <div class="d-flex justify-content-start flex-wrap">
@@ -95,7 +95,7 @@ const IndexPage = () => {
               })}
             </div>
           </div>
-          <div className="row mb-5">
+          <div className="row mb-6 ">
             <h3 className="heading-smaller">Back-end</h3>
             <div className="purple-gradient-border-bottom mb-3"></div>
             <div class="d-flex justify-content-start flex-wrap">
@@ -108,7 +108,7 @@ const IndexPage = () => {
               })}
             </div>
           </div>
-          <div className="row mb-5">
+          <div className="row mb-6 ">
             <h3 className="heading-smaller">Other</h3>
             <div className="purple-gradient-border-bottom mb-3"></div>
             <div class="d-flex justify-content-start flex-wrap">

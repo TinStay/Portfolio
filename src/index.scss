@@ -1,5 +1,92 @@
 @import "./variables";
 
+/* ##################### */
+/* ### Common classes ### */
+/* ##################### */
+
+.mb-6{
+  margin-bottom: 4rem;
+}
+
+.w-70-centered {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.w-lg-70-centered {
+  width: 96%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 992px) {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.w-80-centered {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.w-lg-80-centered {
+  width: 90%;
+  margin: 0 auto;
+  @media screen and (min-width: 992px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.w-90-centered {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.w-lg-90-centered {
+  @media screen and (min-width: 992px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.diplay-flex {
+  display: flex;
+}
+
+
+.light-gray-container {
+  padding-bottom: 10rem;
+  min-height: 100%;
+  background-color: $light-gray-bgc;
+  border-bottom: 1px solid rgb(240, 240, 240);
+
+  @media screen and (min-width: 992px) {
+    min-height: 100vh;
+    // padding: 1rem 0 8rem 0;
+  }
+}
+
+.purple-gradient-border-bottom {
+  margin: 14px 0;
+  height: 4px;
+  border-radius: 5px;
+  background: $dark-purple-main; /* Default color */
+  background: -webkit-linear-gradient(
+    to right,
+    $dark-purple-main,
+    $light-purple-main
+  ); /* Color for supporter browsers: Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    $dark-purple-main,
+    $light-purple-main
+  ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.center-element {
+  margin: 0 auto;
+}
+
 .blue-font {
   color: blue;
 }
@@ -61,6 +148,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: $default-font-family;
+}
+
+.layout-container{
+  position: relative;
 }
 
 header {
@@ -141,92 +232,6 @@ header {
   border-bottom: 3px solid #5a13f2;
 }
 
-/* ##################### */
-/* ### Common classes ### */
-/* ##################### */
-
-.w-70-centered {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.w-lg-70-centered {
-  width: 96%;
-  margin: 0 auto;
-
-  @media screen and (min-width: 992px) {
-    width: 70%;
-    margin: 0 auto;
-  }
-}
-
-.w-80-centered {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.w-lg-80-centered {
-  width: 90%;
-  margin: 0 auto;
-  @media screen and (min-width: 992px) {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
-.w-90-centered {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.w-lg-90-centered {
-  @media screen and (min-width: 992px) {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-
-.diplay-flex {
-  display: flex;
-}
-
-.two-column-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.three-column-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 50px;
-}
-
-.light-gray-container {
-  height: 90%;
-  background-color: $light-gray-bgc;
-  padding: 1.8rem 0 8rem 0;
-}
-
-.purple-gradient-border-bottom {
-  margin: 14px 0;
-  height: 4px;
-  border-radius: 5px;
-  background: $dark-purple-main; /* Default color */
-  background: -webkit-linear-gradient(
-    to right,
-    $dark-purple-main,
-    $light-purple-main
-  ); /* Color for supporter browsers: Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    $dark-purple-main,
-    $light-purple-main
-  ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.center-element {
-  margin: 0 auto;
-}
 
 /* ##################### */
 /* ### Home page ### */
@@ -237,7 +242,7 @@ header {
   margin: 5% auto 5% auto;
 
   @media screen and (min-width: 992px) {
-    // margin: 10% auto 0 auto;
+    margin: 10% auto 0 auto;
   }
 }
 
@@ -366,13 +371,18 @@ header {
   font-weight: 600;
   color: $light-purple-main;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover{
+    color: $light-purple-main;
+  }
 
   @media screen and (min-width: 992px) {
     padding: 12px 35px;
   }
 }
 
-.profile-image-container{
+.profile-image-container {
   margin: 5% auto 0 auto;
 
   @media screen and (min-width: 992px) {
@@ -381,7 +391,7 @@ header {
 }
 
 .profile-image-circle {
-  margin: 0 auto;
+  margin: 5% auto 5% auto;
   width: 160px;
   height: 145px;
 
@@ -407,6 +417,7 @@ header {
   @media screen and (min-width: 992px) {
     width: 315px;
     height: 285px;
+    margin: 10% auto 0 auto;
   }
 
   @media screen and (min-width: 1199px) {
@@ -433,10 +444,6 @@ header {
 }
 
 @media only screen and (max-width: 1199px) {
-  .light-gray-container {
-    padding: 1rem 0 8rem 0;
-  }
-
   .heading-middle {
     font-size: 1.6rem;
   }
@@ -446,6 +453,11 @@ header {
     justify-content: space-around;
     margin: 3rem 0;
   }
+}
+
+.skills-container{
+  padding-top: 2rem;
+  padding-bottom: 10rem;
 }
 
 /* ##################### */
@@ -540,7 +552,6 @@ header {
 
 .project-detail-desc {
   margin: 50px 0px 50px 0;
-
 }
 
 .tech-icon {
@@ -575,7 +586,7 @@ header {
 
   .carousel-image {
     width: 100%;
-    height: 100%;
+  max-height: 1080px;
     border-radius: 7px; /* top side */
     margin: 0 auto;
     border-bottom: 1px solid rgb(233, 233, 233);
@@ -724,7 +735,7 @@ textarea:focus {
 /* ##################### */
 
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   /* border-top: 1px solid #023047; */

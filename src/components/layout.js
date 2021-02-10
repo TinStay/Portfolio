@@ -35,6 +35,7 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
         }}
+        className="layout-container"
       >
         <main>{children}</main>
         <footer>
