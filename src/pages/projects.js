@@ -8,7 +8,7 @@ const Projects = ({ data }) => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <div className="light-gray-container pt-4">
+      <div className="light-gray-container pt-4 pb-footer">
         <div className="container w-lg-80-centered">
           <h1 className="heading-section text-center">My projects</h1>
           <div className="row project-row equal">

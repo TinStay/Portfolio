@@ -19,7 +19,7 @@ const ProjectDetail = ({ data }) => {
 
   return (
     <Layout>
-      <div className="light-gray-container">
+      <div className="light-gray-container pt-4 pb-footer">
         <div className="w-lg-80-centered">
           <Link className="btn-go-back text-decoration-none" to="/projects">
             <i className="fas fa-angle-left mb-2 me-1"></i>Go back
