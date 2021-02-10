@@ -23,10 +23,10 @@ const IndexPage = () => {
   `)
 
   const frontendIcons = [
-    <Icon name="Html" />,
-    <Icon name="Css" />,
+    <Icon name="HTML" />,
+    <Icon name="CSS" />,
     <Icon name="Bootstrap" />,
-    <Icon name="Javascript" />,
+    <Icon name="JavaScript" />,
     <Icon name="React" />,
     <Icon name="Redux" />,
     <Icon name="Gatsby" />,
@@ -41,7 +41,7 @@ const IndexPage = () => {
   const otherIcons = [
     <Icon name="Sass" />,
     <Icon name="Heroku" />,
-    <Icon name="Xd" />,
+    <Icon name="Adobe Experience Design" />,
   ]
 
   return (

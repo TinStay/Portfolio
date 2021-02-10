@@ -1,23 +1,24 @@
 import React from "react"
+import { OverlayTrigger, Tooltip } from "react-bootstrap"
 
 const Icon = props => {
   let icon = null
 
   switch (props.name) {
     case "React":
-      icon = <i className="devicon-react-original tech-icon colored"></i>
+      icon = <i className="devicon-react-original tech-icon colored"> </i>
       break
 
     case "Redux":
-      icon = <i className="devicon-redux-original tech-icon colored"></i>
+      icon = <i className="devicon-redux-original tech-icon colored"> </i>
       break
 
-    case "Html":
-      icon = <i class="devicon-html5-plain tech-icon colored"></i>
+    case "HTML":
+      icon = <i className="devicon-html5-plain tech-icon colored"> </i>
       break
 
-    case "Css":
-      icon = <i className="devicon-css3-plain tech-icon colored"></i>
+    case "CSS":
+      icon = <i className="devicon-css3-plain tech-icon colored"> </i>
       break
 
     case "Sass":
@@ -28,7 +29,7 @@ const Icon = props => {
       icon = <i className="devicon-gatsby-plain tech-icon colored"></i>
       break
 
-    case "Javascript":
+    case "JavaScript":
       icon = <i className="devicon-javascript-plain tech-icon colored"></i>
       break
 
@@ -49,23 +50,36 @@ const Icon = props => {
       break
 
     case "Git":
-      icon = <i class="devicon-git-plain tech-icon colored"></i>
+      icon = <i className="devicon-git-plain tech-icon colored"></i>
       break
 
     case "Heroku":
-      icon = <i class="devicon-heroku-plain tech-icon colored"></i>
+      icon = <i className="devicon-heroku-plain tech-icon colored"></i>
       break
 
-    case "Xd":
-      icon = <i class="devicon-xd-plain tech-icon colored"></i>
+    case "Adobe Experience Design":
+      icon = <i className="devicon-xd-plain tech-icon colored" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>"></i>
       break
 
     default:
       break
   }
 
-  if (icon !== null) return icon
-  else return null
+  if (icon !== null) {
+    return (
+      <OverlayTrigger
+        key={props.name}
+        placement="bottom"
+        overlay={
+          <Tooltip id={`tooltip-${props.name}`} animation="true">
+            {props.name}
+          </Tooltip>
+        }
+      >
+        {icon}
+      </OverlayTrigger>
+    )
+  } else return null
 }
 
 export default Icon
