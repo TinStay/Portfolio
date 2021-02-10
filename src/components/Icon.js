@@ -58,7 +58,11 @@ const Icon = props => {
       break
 
     case "Adobe Experience Design":
-      icon = <i className="devicon-xd-plain tech-icon colored" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>"></i>
+      icon = <i className="devicon-xd-plain tech-icon colored"></i>
+      break
+    
+      case "Visual Studio":
+      icon = <i class="devicon-visualstudio-plain tech-icon colored"></i>
       break
 
     default:

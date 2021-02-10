@@ -8,6 +8,14 @@
   margin-bottom: 4rem;
 }
 
+.mb-lg-6{
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 4rem;
+  }
+}
+
 .pb-footer{
   padding-bottom: 10rem;
 }
@@ -27,6 +35,10 @@
   }
 }
 
+.w-80{
+  width: 80%;
+}
+
 .w-80-centered {
   width: 80%;
   margin: 0 auto;
@@ -41,12 +53,24 @@
   }
 }
 
+.w-90{
+  width: 90%;
+}
+.w-lg-90{
+  @media screen and (min-width: 992px) {
+    width: 90%;
+  }
+}
+
 .w-90-centered {
   width: 90%;
   margin: 0 auto;
 }
 
 .w-lg-90-centered {
+  width: 94%;
+  margin: 0 auto;
+
   @media screen and (min-width: 992px) {
     width: 90%;
     margin: 0 auto;
@@ -90,8 +114,13 @@
 }
 
 .blue-font {
-  color: blue;
+  color: $dark-blue-font;
 }
+
+.line-height{
+  line-height: 2rem;
+}
+
 
 .btn-purple-rounded {
   border-radius: 50px;
@@ -258,7 +287,7 @@ header {
 
 .heading-small {
   margin: 15px 0;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: $dark-blue-font;
 
@@ -458,6 +487,17 @@ header {
 .skills-container{
 }
 
+.about-image{
+  margin: auto auto;
+
+  @media screen and (min-width: 992px) {
+    width: inherit;
+    height: inherit;
+  }
+  
+  width: inherit;
+}
+
 .purple-container{
   background: $dark-purple-main; /* Default color */
   background: -webkit-linear-gradient(
@@ -472,7 +512,28 @@ header {
   ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   .about-container{
+    position: relative;
     background-color: white;
+  }
+
+  .purple-line{
+    position: absolute;
+    left: 50%;
+    height: 90%;
+    width: 3px;
+    border-radius: 5px;
+    background: $dark-purple-main; /* Default color */
+    background: -webkit-linear-gradient(
+      to right,
+      $dark-purple-main,
+      $light-purple-main
+    ); /* Color for supporter browsers: Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      $dark-purple-main,
+      $light-purple-main
+    ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   }
 }
 
