@@ -24,9 +24,13 @@ const IndexPage = ({ data }) => {
 
   const otherIcons = [
     <Icon name="Sass" />,
-    <Icon name="Heroku" />,
+    <Icon name="Adobe Photoshop" />,
     <Icon name="Adobe Experience Design" />,
+    <Icon name="React Router" />,
+    <Icon name="Heroku" />,
     <Icon name="Visual Studio" />,
+    <Icon name="npm" />,
+    <Icon name="Netlify" />,
   ]
   return (
     <Layout>
@@ -101,7 +105,7 @@ const IndexPage = ({ data }) => {
             <div className="d-flex justify-content-start flex-wrap">
               {otherIcons.map((icon, idx) => {
                 return (
-                  <div key={idx} className="me-2 me-sm-3 me-lg-4 me-xl-5 mb-2">
+                  <div key={idx} className="me-2 me-sm-3 me-lg-4 me-xl-auto mb-2">
                     {icon}
                   </div>
                 )

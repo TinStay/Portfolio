@@ -1,4 +1,8 @@
 import React from "react"
+import { IconContext } from "react-icons"
+import { SiReactrouter } from "react-icons/si"
+import { SiNetlify } from "react-icons/si"
+
 import { OverlayTrigger, Tooltip } from "react-bootstrap"
 
 const Icon = props => {
@@ -60,9 +64,31 @@ const Icon = props => {
     case "Adobe Experience Design":
       icon = <i className="devicon-xd-plain tech-icon colored"></i>
       break
-    
-      case "Visual Studio":
-      icon = <i class="devicon-visualstudio-plain tech-icon colored"></i>
+
+    case "Visual Studio":
+      icon = <i className="devicon-visualstudio-plain tech-icon colored"></i>
+      break
+
+    case "Adobe Photoshop":
+      icon = <i className="devicon-photoshop-plain tech-icon colored"></i>
+      break
+
+    case "npm":
+      icon = <i className="devicon-npm-original-wordmark tech-icon colored"></i>
+      break
+
+    case "React Router":
+      icon = <SiReactrouter className="tech-icon" />
+      break
+
+    case "Netlify":
+      icon = (
+        // <IconContext.Provider
+        //   value={{ className:"tech-icon netlify-icon" }}
+        // >
+          <SiNetlify  className="tech-icon netlify-icon" />
+        // {/* </IconContext.Provider> */}
+      )
       break
 
     default:
@@ -75,7 +101,11 @@ const Icon = props => {
         key={props.name}
         placement="bottom"
         overlay={
-          <Tooltip id={`tooltip-${props.name}`} animation="true">
+          <Tooltip
+            className="zindex-tooltip"
+            id={`tooltip-${props.name}`}
+            animation="true"
+          >
             {props.name}
           </Tooltip>
         }

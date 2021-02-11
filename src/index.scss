@@ -170,6 +170,10 @@
   flex-wrap: wrap;
 }
 
+.zindex-tooltip{
+  z-index: $zindex-tooltip;
+}
+
 html {
   font-family: $default-font-family;
   font-size: 20px;
@@ -640,9 +644,25 @@ header {
   }
 }
 
-// .icon-tooltip{
-//   background-color: red;
-// }
+.netlify-icon{
+  color:#00AD9F !important;
+  // background:#00AD9F !important;
+  // background: -webkit-linear-gradient(
+  //   to bottom,
+  //   #00AD9F,
+  //   #00C7B7
+  // ) !important; /* Color for supporter browsers: Chrome 10-25, Safari 5.1-6 */
+  
+  // background: linear-gradient(
+  //   to bottom,
+  //   #00AD9F,
+  //   #00C7B7
+  // )!important; /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // -webkit-background-clip: text !important;
+  // -webkit-text-fill-color: transparent !important;
+  
+}
+
 
 .project-detail-preview {
   margin: 50px 80px 50px 0;
