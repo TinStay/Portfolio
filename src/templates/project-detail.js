@@ -143,7 +143,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allFile(filter: { relativeDirectory: { eq: $title } }) {
+    allFile(filter: { relativeDirectory: { eq: $title } }, sort: {fields: name, order: ASC}) {
       edges {
         node {
           childImageSharp {
@@ -151,6 +151,7 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+          name
         }
       }
     }
