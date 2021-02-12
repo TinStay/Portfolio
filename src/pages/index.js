@@ -38,7 +38,7 @@ const IndexPage = ({ data }) => {
       <div className="light-gray-container">
         <div className=" w-lg-70-centered">
           <div className="row">
-            <div className="profile-image-container col-lg-6 order-md-2 px-0">
+            <div className="profile-image-container col-lg-6 order-lg-2 px-0">
               <div className="profile-image-circle">
                 <Img
                   className="profile-image"
@@ -73,7 +73,7 @@ const IndexPage = ({ data }) => {
           <div className="row mb-6">
             <h3 className="heading-smaller">Front-end</h3>
             <div className="purple-gradient-border-bottom mb-3"></div>
-            <div className="d-flex justify-content-start flex-wrap">
+            <div className="d-flex justify-content-around justify-content-sm-start  flex-wrap">
               {frontendIcons.map((icon, idx) => {
                 return (
                   <div
@@ -89,7 +89,7 @@ const IndexPage = ({ data }) => {
           <div className="row mb-6 ">
             <h3 className="heading-smaller">Back-end</h3>
             <div className="purple-gradient-border-bottom mb-3"></div>
-            <div className="d-flex justify-content-start flex-wrap">
+            <div className="d-flex justify-content-around justify-content-sm-start flex-wrap">
               {backendIcons.map((icon, idx) => {
                 return (
                   <div key={idx} className="me-2 me-sm-3 me-lg-4 me-xl-5 mb-2">
@@ -102,10 +102,13 @@ const IndexPage = ({ data }) => {
           <div className="row mb-6 ">
             <h3 className="heading-smaller">Other</h3>
             <div className="purple-gradient-border-bottom mb-3"></div>
-            <div className="d-flex justify-content-start flex-wrap">
+            <div className="d-flex justify-content-around justify-content-sm-start flex-wrap">
               {otherIcons.map((icon, idx) => {
                 return (
-                  <div key={idx} className="me-2 me-sm-3 me-lg-4 me-xl-auto mb-2">
+                  <div
+                    key={idx}
+                    className="me-2 me-sm-3 me-lg-4 me-xl-auto mb-2"
+                  >
                     {icon}
                   </div>
                 )
@@ -115,7 +118,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <div className="purple-container pt-5 pb-footer">
-        <div className="about-container rounded pt-4 pb-5 px-4  w-lg-90-centered ">
+        <div className="about-container rounded pt-3 pb-5 px-4  w-lg-90-centered ">
           {/* <div className="purple-line"></div> */}
 
           <div className="row mb-lg-6">
@@ -127,7 +130,10 @@ const IndexPage = ({ data }) => {
               />
             </div>
             <div className="col-md-6 text-center text-lg-start px-1 my-auto order-1 order-md-2">
-              <h1 className="heading-small my-3 ">Education</h1>
+              <div class="w-lg-50">
+                <h1 className=" mt-3 h2 blue-font">Studies</h1>
+                <div className="purple-gradient-border-bottom mb-3 "></div>
+              </div>
               <p className="blue-font line-height w-lg-90 ">
                 Designing and building web applications has been my passion for
                 the past 2 years. Learning-By-Doing, in my opinion, is the most
@@ -138,7 +144,10 @@ const IndexPage = ({ data }) => {
           </div>
           <div className="row mb-lg-6 ">
             <div className="col-md-6 text-center text-lg-end px-1 my-auto">
-              <h1 className="heading-small my-3">Experience</h1>
+              <div className="w-lg-50 ms-lg-auto">
+                <h1 className="h2 blue-font mt-3">Experience</h1>
+                <div className="purple-gradient-border-bottom mb-3  ms-auto"></div>
+              </div>
               <p className="blue-font line-height w-lg-90 ms-auto">
                 My experience as a web developer comes from creating websites
                 with appealing mobile first and desktop designs for the
@@ -163,7 +172,10 @@ const IndexPage = ({ data }) => {
               />
             </div>
             <div className="col-md-6 text-center text-lg-start px-1 my-auto order-1 order-md-2">
-              <h1 className="heading-small my-3">Interests</h1>
+              <div class="w-lg-50">
+                <h1 className="h2 blue-font mt-3">Interests</h1>
+                <div className="purple-gradient-border-bottom mb-3 "></div>
+              </div>
               <p className="blue-font line-height w-lg-90">
                 I am particularly interested in the whole process of building
                 web apps- from the development to the deployment and improvement

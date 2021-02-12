@@ -9,16 +9,16 @@ const Projects = ({ data }) => {
     <Layout>
       <SEO title="Projects" />
       <div className="light-gray-container pt-4 pb-footer">
-        <div className="container w-lg-80-centered">
+        <div className="container w-lg-90-centered">
           <h1 className="heading-section text-center">My projects</h1>
           <div className="row project-row equal">
             {data.allMarkdownRemark.edges.map(project => {
               return (
                 <div
                   key={project.node.id}
-                  className="col-md-6 col-lg-4 mb-5 ps-lg-0 "
+                  className="col-md-6 col-lg-4 px-0 px-sm-2 mb-5 ps-lg-0 "
                 >
-                  <div className="project-card mx-lg-2 mb-2">
+                  <div className="project-card  mx-lg-2 mb-2">
                     <Link to={project.node.frontmatter.path}>
                       <div className="project-card-purple-bgc">
                         <Img
