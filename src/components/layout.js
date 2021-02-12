@@ -42,12 +42,12 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          <div className="footer-container  d-md-flex justify-content-between">
-            <div className="">
-              <p className="small-icon">
+          <div className="footer-container d-md-flex justify-content-between">
+            <div className="mb-4 mb-md-0">
+              <p className="small-icon mb-3">
                 <MdEmail /> <span className="text-small">marti.staykov@gmail.com</span> 
               </p>
-              <p className="small-icon">
+              <p className="small-icon mb-3">
                 <AiFillPhone /> <span className="text-small">+359 88706 6622</span> 
               </p>
             </div>
