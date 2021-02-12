@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import Icon from "../components/Icon"
+import TechIcon from "../components/Icons/TechIcon"
 
 // import { ReactIcon } from "@react-icons/all-files/fa/FaReact";
 // import { SassIcon } from "@react-icons/all-files/fa/FaSass";
@@ -20,7 +20,7 @@ const ProjectDetail = ({ data }) => {
   return (
     <Layout>
       <div className="light-gray-container pt-4 pb-footer">
-        <div className="w-lg-80-centered">
+        <div className="w-lg-90-centered">
           <Link className="btn-go-back text-decoration-none" to="/projects">
             <i className="fas fa-angle-left mb-2 me-1"></i>Go back
           </Link>
@@ -88,7 +88,7 @@ const ProjectDetail = ({ data }) => {
                         key={idx}
                         className="col-4 col-md-3 col-xl-4 text-center"
                       >
-                        <Icon name={technology} />
+                        <TechIcon name={technology} />
                       </div>
                     )
                   })}

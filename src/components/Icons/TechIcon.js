@@ -5,7 +5,7 @@ import { SiNetlify } from "react-icons/si"
 
 import { OverlayTrigger, Tooltip } from "react-bootstrap"
 
-const Icon = props => {
+const TechIcon = ({ tooltip = true, ...props }) => {
   let icon = null
 
   switch (props.name) {
@@ -82,13 +82,11 @@ const Icon = props => {
       break
 
     case "Netlify":
-      icon = (
-        // <IconContext.Provider
-        //   value={{ className:"tech-icon netlify-icon" }}
-        // >
-          <SiNetlify  className="tech-icon netlify-icon" />
-        // {/* </IconContext.Provider> */}
-      )
+      icon = <SiNetlify className="tech-icon netlify-icon" />
+      break
+
+    case "Netlify":
+      icon = <SiNetlify className="tech-icon netlify-icon" />
       break
 
     default:
@@ -96,24 +94,28 @@ const Icon = props => {
   }
 
   if (icon !== null) {
-    return (
-      <OverlayTrigger
-        key={props.name}
-        placement="bottom"
-        overlay={
-          <Tooltip
-            className="zindex-tooltip"
-            id={`tooltip-${props.name}`}
-            animation="true"
-          >
-            {props.name}
-          </Tooltip>
-        }
-      >
-        {icon}
-      </OverlayTrigger>
-    )
+    if (tooltip == true) {
+      return (
+        <OverlayTrigger
+          key={props.name}
+          placement="bottom"
+          overlay={
+            <Tooltip
+              className="zindex-tooltip"
+              id={`tooltip-${props.name}`}
+              animation="true"
+            >
+              {props.name}
+            </Tooltip>
+          }
+        >
+          {icon}
+        </OverlayTrigger>
+      )
+    }else{
+      return icon
+    }
   } else return null
 }
 
-export default Icon
+export default TechIcon

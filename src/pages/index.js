@@ -3,34 +3,34 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import Icon from "../components/Icon"
+import TechIcon from "../components/Icons/TechIcon"
 
 const IndexPage = ({ data }) => {
   const frontendIcons = [
-    <Icon name="HTML" />,
-    <Icon name="CSS" />,
-    <Icon name="Bootstrap" />,
-    <Icon name="JavaScript" />,
-    <Icon name="React" />,
-    <Icon name="Redux" />,
-    <Icon name="Gatsby" />,
+    <TechIcon name="HTML" />,
+    <TechIcon name="CSS" />,
+    <TechIcon name="Bootstrap" />,
+    <TechIcon name="JavaScript" />,
+    <TechIcon name="React" />,
+    <TechIcon name="Redux" />,
+    <TechIcon name="Gatsby" />,
   ]
 
   const backendIcons = [
-    <Icon name="Python" />,
-    <Icon name="Django" />,
-    <Icon name="Firebase" />,
+    <TechIcon name="Python" />,
+    <TechIcon name="Django" />,
+    <TechIcon name="Firebase" />,
   ]
 
   const otherIcons = [
-    <Icon name="Sass" />,
-    <Icon name="Adobe Photoshop" />,
-    <Icon name="Adobe Experience Design" />,
-    <Icon name="React Router" />,
-    <Icon name="Heroku" />,
-    <Icon name="Visual Studio" />,
-    <Icon name="npm" />,
-    <Icon name="Netlify" />,
+    <TechIcon name="Sass" />,
+    <TechIcon name="Adobe Photoshop" />,
+    <TechIcon name="Adobe Experience Design" />,
+    <TechIcon name="React Router" />,
+    <TechIcon name="Heroku" />,
+    <TechIcon name="Visual Studio" />,
+    <TechIcon name="npm" />,
+    <TechIcon name="Netlify" />,
   ]
   return (
     <Layout>

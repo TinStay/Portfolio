@@ -14,9 +14,12 @@ import Header from "./Navigation/header"
 import "./layout.css"
 import "../index.scss"
 
+import { MdEmail } from "react-icons/md"
+import { AiFillPhone } from "react-icons/ai"
+import { FaGithub, FaFacebookSquare } from "react-icons/fa"
+import { GrLinkedin } from "react-icons/gr"
+
 const Layout = ({ children }) => {
-
-
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -39,40 +42,38 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          <div className="footer-container">
-            <div className="left-side">
-              <p>
-                <span className="small-icon">
-                  <i className="fa fa-envelope"></i>
-                </span>{" "}
-                marti.staykov@gmail.com
+          <div className="footer-container  d-md-flex justify-content-between">
+            <div className="">
+              <p className="small-icon">
+                <MdEmail /> <span className="text-small">marti.staykov@gmail.com</span> 
               </p>
-              <p>
-                <span className="small-icon">
-                  <i className="fa fa-phone"></i>
-                </span>
-                +359 88706 6622{" "}
+              <p className="small-icon">
+                <AiFillPhone /> <span className="text-small">+359 88706 6622</span> 
               </p>
             </div>
-            {/* <div className="right-side">
+            <div className="d-flex justify-content-between text-center">
               <a
                 className="footer-icon"
                 href="https://github.com/TinStay"
                 target="_blank"
               >
-                <i className="fa fa-github"></i>
+                <FaGithub />
               </a>
-              <a className="footer-icon" href="#">
-                <i className="	fa fa-linkedin"></i>
+              <a
+                className="footer-icon"
+                href="https://www.linkedin.com/in/martin-staykov-25993b184/"
+                target="_blank"
+              >
+                <GrLinkedin />
               </a>
               <a
                 className="footer-icon"
                 href="https://www.facebook.com/martin.staykov.1/about_work_and_education"
                 target="_blank"
               >
-                <i className="fa fa-facebook-square "></i>
+                <FaFacebookSquare />
               </a>
-              <a
+              {/* <a
                 className="footer-icon"
                 href="https://www.instagram.com/martino_stay/"
                 target="_blank"
@@ -85,8 +86,8 @@ const Layout = ({ children }) => {
                 target="_blank"
               >
                 <i className="fa fa-twitter "></i>
-              </a>
-            </div> */}
+              </a> */}
+            </div>
           </div>
         </footer>
       </div>
