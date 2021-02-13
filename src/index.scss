@@ -17,7 +17,7 @@
 }
 
 .pb-footer {
-  padding-bottom: 12rem;
+  padding-bottom: 15rem;
 }
 
 .w-lg-40 {
@@ -152,6 +152,12 @@
     $light-purple-main
   ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+   
   &:hover {
     color: white;
     background: $dark-purple-main-hover; /* Default color */
@@ -829,13 +835,13 @@ header {
 }
 
 .contact-form {
-  margin-top: 1.5rem;
-  padding-top: 0.2rem;
+  margin-top: 1.2rem;
+  padding-top: 0rem;
 }
 
-.contact-form-field {
-  padding: 0px 0 30px 0;
-}
+// .contact-form-field {
+//   padding: 0px 0 30px 0;
+// }
 
 .contact-form-label {
   font-weight: 500;
@@ -845,13 +851,12 @@ header {
 
 .contact-form-input {
   width: 100%;
-  max-width: 90%;
   display: block;
-  padding: 7px 10px;
+  padding: 8px 15px;
   margin-top: 0.4rem;
   font-size: 0.8rem;
   color: $dark-blue-font;
-  border-radius: 4px;
+  border-radius: 18px;
   border: 2px solid rgb(204, 203, 206);
   font-family: $default-font-family;
 }
