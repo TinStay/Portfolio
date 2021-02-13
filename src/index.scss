@@ -265,8 +265,8 @@ header {
 }
 
 .nav-item {
-  margin: 2px auto 0px auto;
-  padding: 7px 0;
+  margin: 10px auto 7px auto;
+  padding: 0 0 7px 0 ; 
   font-size: 1rem;
   font-weight: bold;
   list-style: none;
@@ -275,9 +275,10 @@ header {
   width: 40%;
   text-align: center;
   text-decoration: none;
-
+  
   @media screen and (min-width: 992px) {
     margin: 2px 50px 0px 50px;
+    padding: 10px 0;
   }
 
   &:hover {
@@ -301,10 +302,17 @@ header {
 
 .nav-link {
   text-decoration: none;
+  padding: 0px;
   color: inherit !important;
+
+  @media screen and (min-width: 992px) {
+    padding: 7px;
+  }
 }
 
 .active-link {
+  margin: 10px auto ;
+  // padding: 4px 0 7px  0 ; 
   background: $dark-purple-main; /* Default color */
   background: -webkit-linear-gradient(
     to right,
@@ -319,6 +327,10 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: 3px solid #5a13f2;
+
+  @media screen and (min-width: 992px) {
+    margin: 2px 50px 0px 50px;
+  }
 }
 
 /* ##################### */
@@ -744,9 +756,8 @@ header {
 /* ### Contact me page ### */
 /* ##################### */
 
-.contact-white-container {
+.contact-container {
   background-color: #fff;
-  padding: 20px 40px;
   border-radius: 10px;
   border: 1px solid rgb(233, 233, 233);
 }
@@ -760,7 +771,7 @@ header {
 }
 
 .contact-info-container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 

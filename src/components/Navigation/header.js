@@ -10,18 +10,18 @@ import { IconContext } from "react-icons"
 const Header = ({ siteTitle }) => {
   return (
     <header>
-      <Navbar className="navbar p-0 mt-0" expand="lg">
+      <Navbar className="navbar py-1 py-lg-0 mt-0" expand="lg">
         <Navbar.Brand href="/" className="py-0">
           <Logo />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbar-main ">
-              {/* <CgMenu className="navbar-hamburger" /> */}
-              <div className="hamburger-menu">
-                <div className="hamburger-line"></div>
-                <div className="hamburger-line"></div>
-                <div className="hamburger-line"></div>
-              </div>
+          {/* <CgMenu className="navbar-hamburger" /> */}
+          <div className="hamburger-menu">
+            <div className="hamburger-line"></div>
+            <div className="hamburger-line"></div>
+            <div className="hamburger-line"></div>
+          </div>
         </Navbar.Toggle>
 
         <Navbar.Collapse id="navbar-main ">
