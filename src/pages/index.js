@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import TechIcon from "../components/Icons/TechIcon"
+import CV from '../static/Martin Staykov CV.pdf'
 
 const IndexPage = ({ data }) => {
   const frontendIcons = [
@@ -56,7 +57,7 @@ const IndexPage = ({ data }) => {
                   Projects
                 </Link>
                 <a
-                  href="./Prototyping/Martin Staykov CV.docx"
+                  href={CV}
                   download
                   className="btn-jumbotron"
                 >

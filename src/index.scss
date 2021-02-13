@@ -787,8 +787,8 @@ header {
 }
 
 .contact-info-icon {
-  /* color: $dark-blue-font; */
-  /* color: $light-purple-main; */
+  font-size: 1.8rem !important;
+  margin-right: 13px;
   background: $dark-purple-main; /* Default color */
   background: -webkit-linear-gradient(
     to right,
@@ -800,10 +800,27 @@ header {
     $dark-purple-main,
     $light-purple-main
   ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.8rem;
-  margin-right: 13px;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.contact-info-icon-big {
+  font-size: 3rem !important;
+  // margin-right: 13px;
+  margin: auto 0;
+  background: $dark-purple-main; /* Default color */
+  background: -webkit-linear-gradient(
+    to right,
+    $dark-purple-main,
+    $light-purple-main
+  ); /* Color for supporter browsers: Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    $dark-purple-main,
+    $light-purple-main
+  ); /* Color for supporter browsers: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text ;
+  -webkit-text-fill-color: transparent ;
 }
 
 .contact-form-container {
