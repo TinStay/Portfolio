@@ -135,32 +135,38 @@ const Contact = () => {
                   onsubmit="return validateContactForm()"
                   id="contact-form"
                   className="contact-form"
-                  action=""
+                  method="POST"
+                  name="contact-form"
+                  netlify
+                  
                 >
                   <div className="contact-form-field mb-3">
                     <label className="contact-form-label">Name *</label>
                     <input
                       className="contact-form-input"
-                      name="name-input"
+                      name="name"
                       type="text"
                       placeholder="Enter your name"
+                      required
                     />
                   </div>
                   <div className="contact-form-field mb-3">
                     <label className="contact-form-label">Email *</label>
                     <input
                       className="contact-form-input"
-                      name="email-input"
+                      name="email"
                       type="email"
                       placeholder="Enter your email"
+                      required
                     />
                   </div>
                   <div className="contact-form-field mb-3">
                     <label className="contact-form-label">Message *</label>
                     <textarea
                       className="contact-form-input"
-                      name="message-input"
+                      name="message"
                       placeholder="Enter your message"
+                      required
                     ></textarea>
                   </div>
                   <div className="mt-5">

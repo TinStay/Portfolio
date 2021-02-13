@@ -25,7 +25,7 @@ const ProjectDetail = ({ data }) => {
             <i className="fas fa-angle-left mb-2 me-1"></i>Go back
           </Link>
 
-          <div className="project-detail-container ">
+          <div className="project-detail-container text-center text-lg-start px-3 pt-3 pb-4 px-md-5 py-md-4">
             <div className="d-md-flex justify-content-between mb-4 w-100">
               <h1 className="heading-project-detail">
                 {project !== null && project.frontmatter.title}
@@ -68,17 +68,19 @@ const ProjectDetail = ({ data }) => {
                 })}
             </Carousel>
             <div className="row ">
-              <div className="project-detail-desc col-xl-8">
+
+              <div className="project-detail-desc my-4  col-xl-8">
                 <h3 className="heading-smaller ">Description</h3>
                 <div className="purple-gradient-border-bottom"></div>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: project !== null && project.html,
                   }}
-                  className="project-detail-desc-text"
+                  className="project-detail-desc-text my-0"
                 ></div>
               </div>
-              <div className="project-detail-desc col-xl-4">
+
+              <div className="project-detail-desc my-4 col-xl-4">
                 <h3 className="heading-smaller">Tech Stack</h3>
                 <div className="purple-gradient-border-bottom"></div>
                 <div className="row">
@@ -96,12 +98,12 @@ const ProjectDetail = ({ data }) => {
               </div>
             </div>
             <div className="row">
-              <div className="col-xl-8">
+              <div className="my-4 col-xl-8">
                 <h3 className="heading-smaller">Learning outcome</h3>
                 <div className="purple-gradient-border-bottom"></div>
-                <p>{project.frontmatter.learningOutcome}</p>
+                <p className="">{project.frontmatter.learningOutcome}</p>
               </div>
-              <div className="col-xl-4">
+              <div className="my-4 col-xl-4">
                 <div>
                   <h3 className="heading-smaller">Github repository</h3>
                   <div className="purple-gradient-border-bottom"></div>
