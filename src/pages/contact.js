@@ -132,7 +132,6 @@ const Contact = () => {
                 <h3 className="heading-smaller">Send me a message</h3>
                 <div className="purple-gradient-border-bottom"></div>
                 <form
-                  onsubmit="return validateContactForm()"
                   id="contact-form"
                   className="contact-form"
                   method="POST"
