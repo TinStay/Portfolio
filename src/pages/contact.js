@@ -134,7 +134,7 @@ const Contact = () => {
                 <form
                   id="contact-form"
                   className="contact-form"
-                  method="POST"
+                  // method="POST"
                   name="contact-form"
                   netlify
                   
