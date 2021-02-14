@@ -135,16 +135,17 @@ const Contact = () => {
                   id="contact-form"
                   className="contact-form"
                   method="post"
-                  name="contact"
-                  netlify
+                  name="contact-me-form"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
                   onSubmit="submit"
                 >
-                  <input type="hidden" name="form-name" value="contact" />
+                  <input type="hidden" name="form-name" value="contact-me-form" />
                   <div className="contact-form-field mb-3">
                     <label className="contact-form-label">Name *</label>
                     <input
                       className="contact-form-input"
-                      name="input-name"
+                      name="name"
                       type="text"
                       placeholder="Enter your name"
                       required
@@ -154,7 +155,7 @@ const Contact = () => {
                     <label className="contact-form-label">Email *</label>
                     <input
                       className="contact-form-input"
-                      name="input-email"
+                      name="email"
                       type="email"
                       placeholder="Enter your email"
                       required
@@ -164,7 +165,7 @@ const Contact = () => {
                     <label className="contact-form-label">Message *</label>
                     <textarea
                       className="contact-form-input"
-                      name="input-message"
+                      name="message"
                       placeholder="Enter your message"
                       required
                     ></textarea>
