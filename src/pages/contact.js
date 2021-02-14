@@ -134,10 +134,10 @@ const Contact = () => {
                 <form
                   id="contact-form"
                   className="contact-form"
-                  method="POST"
+                  method="post"
                   name="contact"
                   netlify
-                  data-netlify-honeypot="bot-field"
+                  onSubmit="submit"
                 >
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="contact-form-field mb-3">
