@@ -135,7 +135,7 @@ const Contact = () => {
                   id="contact-form"
                   className="contact-form"
                   // method="POST"
-                  name="contact-form"
+                  name="contact"
                   netlify
                   
                 >
@@ -143,7 +143,7 @@ const Contact = () => {
                     <label className="contact-form-label">Name *</label>
                     <input
                       className="contact-form-input"
-                      name="name"
+                      name="input-name"
                       type="text"
                       placeholder="Enter your name"
                       required
@@ -153,7 +153,7 @@ const Contact = () => {
                     <label className="contact-form-label">Email *</label>
                     <input
                       className="contact-form-input"
-                      name="email"
+                      name="input-email"
                       type="email"
                       placeholder="Enter your email"
                       required
@@ -163,7 +163,7 @@ const Contact = () => {
                     <label className="contact-form-label">Message *</label>
                     <textarea
                       className="contact-form-input"
-                      name="message"
+                      name="input-message"
                       placeholder="Enter your message"
                       required
                     ></textarea>
