@@ -134,11 +134,12 @@ const Contact = () => {
                 <form
                   id="contact-form"
                   className="contact-form"
-                  // method="POST"
+                  method="POST"
                   name="contact"
                   netlify
-                  
+                  data-netlify-honeypot="bot-field"
                 >
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="contact-form-field mb-3">
                     <label className="contact-form-label">Name *</label>
                     <input
