@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import TechIcon from "../components/Icons/TechIcon"
-import CV from '../static/Martin Staykov CV.pdf'
+import CV from "../static/Martin Staykov CV.pdf"
 
 const IndexPage = ({ data }) => {
   const frontendIcons = [
@@ -50,17 +50,15 @@ const IndexPage = ({ data }) => {
             </div>
             <div className="main-text col-lg-6 order-lg-1 px-0">
               <h1 className="heading-tin-stay mx-auto">Tin Stay</h1>
-              <h2 className="heading-small">A Web developer</h2>
-              <h2 className="heading-small">and a problem solver</h2>
+              <div class="secondary-text">
+                <h2 className="heading-small">A Web developer</h2>
+                <h2 className="heading-small">and a problem solver</h2>
+              </div>
               <div className="jumbotron-buttons d-flex justify-content-center">
                 <Link to="/projects/" className="btn-jumbotron-full">
                   Projects
                 </Link>
-                <a
-                  href={CV}
-                  download
-                  className="btn-jumbotron"
-                >
+                <a href={CV} download className="btn-jumbotron">
                   Get CV
                 </a>
               </div>
