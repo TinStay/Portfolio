@@ -67,23 +67,22 @@ const ProjectDetail = ({ data }) => {
                   }
                 })}
             </Carousel>
-            
 
             <div className="row ">
               <div className="project-detail-desc my-4  col-xl-8">
                 <h3 className="heading-smaller ">Description</h3>
-                <div className="purple-gradient-border-bottom"></div>
+                <div className="purple-gradient-border-bottom  w-centered-xs-lg-90  "></div>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: project !== null && project.html,
                   }}
-                  className="project-detail-desc-text my-0"
+                  className="project-detail-desc-text my-0 "
                 ></div>
               </div>
 
               <div className="project-detail-desc my-4 col-xl-4">
                 <h3 className="heading-smaller">Tech Stack</h3>
-                <div className="purple-gradient-border-bottom"></div>
+                <div className="purple-gradient-border-bottom  w-centered-xs-lg-90 w-xl-100"></div>
                 <div className="row">
                   {project.frontmatter.technologies.map((technology, idx) => {
                     return (
@@ -101,13 +100,13 @@ const ProjectDetail = ({ data }) => {
             <div className="row">
               <div className="my-4 col-xl-8">
                 <h3 className="heading-smaller">Learning outcome</h3>
-                <div className="purple-gradient-border-bottom"></div>
+                <div className="purple-gradient-border-bottom w-centered-xs-lg-90   "></div>
                 <p className="">{project.frontmatter.learningOutcome}</p>
               </div>
               <div className="my-4 col-xl-4">
-                <div>
+                <div className="mb-4 ">
                   <h3 className="heading-smaller">Github repository</h3>
-                  <div className="purple-gradient-border-bottom"></div>
+                  <div className="purple-gradient-border-bottom w-centered-xs-lg-90  w-xl-100"></div>
                 </div>
                 <a
                   className="btn-purple-rounded d-block d-lg-inline d-xl-block text-center text-decoration-none py-2 px-4 "
@@ -166,9 +165,8 @@ export const pageQuery = graphql`
 
 export default ProjectDetail
 
-
-
-{/* <button
+{
+  /* <button
               className="btn btn-link d-lg-none dark-blue-font no-outline"
               type="button"
               data-bs-toggle="modal"
@@ -224,4 +222,5 @@ export default ProjectDetail
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div> */
+}

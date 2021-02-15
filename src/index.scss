@@ -61,6 +61,13 @@ p{
   width: 80%;
 }
 
+.w-lg-80 {
+
+  @media screen and (min-width: 992px) {
+    width: 80%;
+  }
+}
+
 .w-80-centered {
   width: 80%;
   margin: 0 auto;
@@ -78,8 +85,26 @@ p{
 .w-90 {
   width: 90%;
 }
+
+.w-centered-xs-lg-90 {
+  width: 90% ;
+  margin: 0 auto;
+
+  @media screen and (min-width: 992px) {
+    width: 90% ;
+    margin: 0 0;
+  }
+}
+
 .w-lg-90 {
   @media screen and (min-width: 992px) {
+    width: 90% !important;
+    margin: 0 0;
+  }
+}
+
+.w-xl-90 {
+  @media screen and (min-width: 1199px) {
     width: 90%;
   }
 }
@@ -87,6 +112,11 @@ p{
 .w-90-centered {
   width: 90%;
   margin: 0 auto;
+
+  @media screen and (min-width: 992px) {
+    // width: 100%;
+    // margin: 0 auto;
+  }
 }
 
 .w-lg-90-centered {
@@ -96,6 +126,12 @@ p{
   @media screen and (min-width: 992px) {
     width: 90%;
     margin: 0 auto;
+  }
+}
+
+.w-xl-100 {
+  @media screen and (min-width: 1199px) {
+    width: 100%;
   }
 }
 
@@ -114,7 +150,8 @@ p{
 }
 
 .purple-gradient-border-bottom {
-  margin: 14px 0;
+  margin-top: 14px ;
+  margin-bottom: 14px ;
   height: 4px;
   border-radius: 5px;
   background: $dark-purple-main; /* Default color */
