@@ -18,7 +18,7 @@ exports.createPages = async ({ actions, graphql }) => {
               shortDescription
               path
               githubRepo
-              
+              position
             }
             
           }

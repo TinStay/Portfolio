@@ -58,7 +58,7 @@ const Projects = ({ data }) => {
 
 export const pageQuery = graphql`
   {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: frontmatter___position, order: ASC }) {
       edges {
         node {
           id
@@ -69,6 +69,7 @@ export const pageQuery = graphql`
             shortDescription
             path
             githubRepo
+            position
             mainImage {
               childImageSharp {
                 fluid {

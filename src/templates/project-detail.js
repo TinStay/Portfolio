@@ -44,7 +44,7 @@ const ProjectDetail = ({ data }) => {
               ) : null}
             </div>
             <Carousel
-              className="carousel-container"
+              className="carousel-container mb-0"
               fade={true}
               indicators={false}
               nextLabel=""
@@ -54,7 +54,7 @@ const ProjectDetail = ({ data }) => {
                 images.map((image, idx) => {
                   if (image.node.childImageSharp !== null) {
                     return (
-                      <Carousel.Item key={idx}>
+                      <Carousel.Item className="" key={idx}>
                         <Img
                           className="carousel-image"
                           fluid={image.node.childImageSharp.fluid}
@@ -67,8 +67,9 @@ const ProjectDetail = ({ data }) => {
                   }
                 })}
             </Carousel>
-            <div className="row ">
+            
 
+            <div className="row ">
               <div className="project-detail-desc my-4  col-xl-8">
                 <h3 className="heading-smaller ">Description</h3>
                 <div className="purple-gradient-border-bottom"></div>
@@ -145,11 +146,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    allFile(filter: { relativeDirectory: { eq: $title } }, sort: {fields: name, order: ASC}) {
+    allFile(
+      filter: { relativeDirectory: { eq: $title } }
+      sort: { fields: name, order: ASC }
+    ) {
       edges {
         node {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 1900, maxHeight: 900) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -161,3 +165,63 @@ export const pageQuery = graphql`
 `
 
 export default ProjectDetail
+
+
+
+{/* <button
+              className="btn btn-link d-lg-none dark-blue-font no-outline"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#carouselModal"
+            >
+              View fullscreen
+            </button>
+            <div
+              className="modal fade"
+              id="carouselModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog modal-fullscreen">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title" id="exampleModalLabel">
+                      {project !== null && project.frontmatter.title}
+                    </h5>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div className="modal-body">
+                    <Carousel
+                      className="carousel-container mb-0"
+                      fade={true}
+                      indicators={false}
+                      nextLabel=""
+                      prevLabel=""
+                    >
+                      {images.length > 0 &&
+                        images.map((image, idx) => {
+                          if (image.node.childImageSharp !== null) {
+                            return (
+                              <Carousel.Item key={idx}>
+                                <Img
+                                  className="carousel-image"
+                                  fluid={image.node.childImageSharp.fluid}
+                                  alt="website"
+                                />
+                              </Carousel.Item>
+                            )
+                          } else {
+                            return null
+                          }
+                        })}
+                    </Carousel>
+                  </div>
+                </div>
+              </div>
+            </div> */}
