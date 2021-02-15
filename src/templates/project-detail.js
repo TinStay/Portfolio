@@ -76,7 +76,7 @@ const ProjectDetail = ({ data }) => {
                   dangerouslySetInnerHTML={{
                     __html: project !== null && project.html,
                   }}
-                  className="project-detail-desc-text my-0 "
+                  className="project-detail-desc-text my-0 line-height"
                 ></div>
               </div>
 
@@ -101,7 +101,7 @@ const ProjectDetail = ({ data }) => {
               <div className="my-4 col-xl-8">
                 <h3 className="heading-smaller">Learning outcome</h3>
                 <div className="purple-gradient-border-bottom w-centered-xs-lg-90   "></div>
-                <p className="">{project.frontmatter.learningOutcome}</p>
+                <p className="line-height">{project.frontmatter.learningOutcome}</p>
               </div>
               <div className="my-4 col-xl-4">
                 <div className="mb-4 ">

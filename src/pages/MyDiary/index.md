@@ -5,7 +5,7 @@ siteURL: "none"
 githubRepo: "https://github.com/TinStay/Django-Diary-App"
 technologies: ["Django", "Bootstrap", "Css"]
 shortDescription: "Keep track of personal experiences and events."
-learningOutcome: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab mollitia dolores non obcaecati soluta fuga error iure perferendis reprehenderit quod."
+learningOutcome: "Developing Django websites like MyDiary is, in my opinion essential for learning how to manage the server-side a CRUD application. Creating data models and templates which are used to render the pages, as well as migrating and managing the database was very unclear for me at first, however, with time it all came together and I got hooked on building websites."
 mainImage: "../../images/MyDiary/01.png"
 position: "5"
 ---
