@@ -14,10 +14,10 @@ p{
 }
 
 .mb-lg-6 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   @media screen and (min-width: 992px) {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -655,7 +655,7 @@ header {
 
   .about-container {
     position: relative;
-    background-color: white;
+    background-color: $light-gray-bgc;
   }
 
   .purple-line {
