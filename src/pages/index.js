@@ -177,9 +177,9 @@ const IndexPage = ({ data }) => {
               </div>
               <p className="blue-font line-height w-lg-90 mb-3">
                 I am particularly interested in the whole process of building
-                web apps- from the development to the deployment and improvement
+                web apps - from the development to the deployment and improvement
                 of a project. Trying to get better at my work alongside
-                discipline and passion get me motivated when I wake up everyday.{" "}
+                discipline and passion gets me motivated when I wake up everyday.{" "}
               </p>
             </div>
           </div>
@@ -212,7 +212,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    image3: file(relativePath: { eq: "Home/website2.png" }) {
+    image3: file(relativePath: { eq: "Home/website3.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
