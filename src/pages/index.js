@@ -123,7 +123,7 @@ const IndexPage = ({ data }) => {
           <div className="row mb-lg-6">
             <div className="col-md-6 order-2 order-md-2">
               <Img
-                className="about-image "
+                className="about-image"
                 fluid={data.image1.childImageSharp.fluid}
                 alt="Tin Stay"
               />
@@ -133,7 +133,7 @@ const IndexPage = ({ data }) => {
                 <h1 className=" mt-3 h2 blue-font">Studies</h1>
                 <div className="purple-gradient-border-bottom mb-3 "></div>
               </div>
-              <p className="blue-font line-height w-lg-90 ">
+              <p className="blue-font line-height w-lg-90  mb-3">
                 Designing and building web applications has been my passion for
                 the past 2 years. Learning-By-Doing, in my opinion, is the most
                 effective way for acquiring new knowledge as a new developer and
@@ -147,7 +147,7 @@ const IndexPage = ({ data }) => {
                 <h1 className="h2 blue-font mt-3">Experience</h1>
                 <div className="purple-gradient-border-bottom mb-3  ms-auto"></div>
               </div>
-              <p className="blue-font line-height w-lg-90 ms-auto">
+              <p className="blue-font line-height w-lg-90 ms-auto mb-3">
                 My experience as a web developer comes from creating websites
                 with appealing mobile first and desktop designs for the
                 front-end and stable CRUD and authentication systems for the
@@ -163,7 +163,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
           <div className="row mb-lg-6">
-            <div className="col-md-6 order-2 order-lg-1">
+            <div className="col-md-6 order-2  order-lg-1">
               <Img
                 className="about-image"
                 fluid={data.image3.childImageSharp.fluid}
@@ -175,7 +175,7 @@ const IndexPage = ({ data }) => {
                 <h1 className="h2 blue-font mt-3">Interests</h1>
                 <div className="purple-gradient-border-bottom mb-3 "></div>
               </div>
-              <p className="blue-font line-height w-lg-90">
+              <p className="blue-font line-height w-lg-90 mb-3">
                 I am particularly interested in the whole process of building
                 web apps- from the development to the deployment and improvement
                 of a project. Trying to get better at my work alongside
@@ -198,21 +198,21 @@ export const pageQuery = graphql`
         }
       }
     }
-    image1: file(relativePath: { eq: "Home/Studying.png" }) {
+    image1: file(relativePath: { eq: "Home/globe.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    image2: file(relativePath: { eq: "Home/compPng.png" }) {
+    image2: file(relativePath: { eq: "Home/desk2.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    image3: file(relativePath: { eq: "Home/cliffPng.png" }) {
+    image3: file(relativePath: { eq: "Home/website2.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

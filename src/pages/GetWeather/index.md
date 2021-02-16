@@ -5,7 +5,7 @@ siteURL: "none"
 githubRepo: "https://github.com/TinStay/GetWeather"
 technologies: ["React", "Redux", "Bootstrap"]
 shortDescription: "A weather app with a get-weather-at-location feature."
-learningOutcome: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab mollitia dolores, non obcaecati soluta fuga error iure perferendis reprehenderit quod."
+learningOutcome: "Building a simple weather application with an appealing layout was a good practice for fetching and working with data from an API. I realised that even a small app like this needs to be developed using a relevant design theme and colors in order to fit the idea behind it and catch the user's eye."
 mainImage: "../../images/GetWeather/01.png"
 position: "4"
 ---

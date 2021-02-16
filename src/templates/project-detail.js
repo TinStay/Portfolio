@@ -15,8 +15,6 @@ const ProjectDetail = ({ data }) => {
   const project = data.markdownRemark
   const images = data ? data.allFile.edges : []
 
-  console.log("project.frontmatter.learningOutcome", project.frontmatter)
-
   return (
     <Layout>
       <div className="light-gray-container pt-4 pb-footer">
