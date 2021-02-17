@@ -159,11 +159,13 @@ const IndexPage = ({ data }) => {
 
           <div className="row mb-lg-6">
             <div className="col-md-6 order-2 order-md-2">
-              <Img
-                className="about-image"
-                fluid={data.image1.childImageSharp.fluid}
-                alt="Tin Stay"
-              />
+              <Fade left>
+                <Img
+                  className="about-image"
+                  fluid={data.image1.childImageSharp.fluid}
+                  alt="Tin Stay"
+                />
+              </Fade>
             </div>
             <div className="col-md-6 text-center text-lg-start px-1 my-auto order-1 order-md-2">
               <div class="w-lg-50 me-lg-auto">
@@ -201,20 +203,24 @@ const IndexPage = ({ data }) => {
               </Fade>
             </div>
             <div className="col-md-6">
-              <Img
-                className="about-image"
-                fluid={data.image2.childImageSharp.fluid}
-                alt="Tin Stay"
-              />
+              <Fade right>
+                <Img
+                  className="about-image"
+                  fluid={data.image2.childImageSharp.fluid}
+                  alt="Tin Stay"
+                />
+              </Fade>
             </div>
           </div>
           <div className="row mb-lg-6">
             <div className="col-md-6 order-2  order-lg-1">
-              <Img
-                className="about-image"
-                fluid={data.image3.childImageSharp.fluid}
-                alt="Tin Stay"
-              />
+              <Fade left>
+                <Img
+                  className="about-image"
+                  fluid={data.image3.childImageSharp.fluid}
+                  alt="Tin Stay"
+                />
+              </Fade>
             </div>
             <div className="col-md-6 text-center text-lg-start px-1 my-auto order-1 order-md-2">
               <div class="w-lg-50 ">
