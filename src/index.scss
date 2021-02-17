@@ -577,7 +577,8 @@ header {
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: $light-purple-main;
+    color: $light-purple-main-hover;
+    border: 3px solid $light-purple-main-hover;
   }
 
   @media screen and (min-width: 992px) {

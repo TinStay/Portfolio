@@ -11,6 +11,10 @@ import { FaGithub, FaFacebookSquare, FaFlag } from "react-icons/fa"
 import { GrLinkedin } from "react-icons/gr"
 import { IoIosFlag } from "react-icons/io"
 
+import Slide from "react-reveal/Slide"
+import Fade from "react-reveal/Fade"
+import Pulse from "react-reveal/Pulse"
+
 const Contact = () => {
   return (
     <Layout>
@@ -25,106 +29,110 @@ const Contact = () => {
                 <div className="purple-gradient-border-bottom"></div>
 
                 <div className="contact-info-details">
-                  <div class="personal-info mb-5">
-                    <div className="contact-info-row d-flex mb-4  ">
-                      <svg width="0" height="0">
-                        <linearGradient
-                          id="purple-gradient"
-                          x1="100%"
-                          y1="100%"
-                          x2="0%"
-                          y2="0%"
-                        >
-                          <stop stopColor="#ab05f2" offset="0%" />
-                          <stop stopColor="#5a13f2" offset="100%" />
-                        </linearGradient>
-                      </svg>
-                      <div>
-                        <MdEmail
-                          className="contact-info-icon"
-                          style={{ fill: "url(#purple-gradient)" }}
-                        />
+                  <Slide bottom cascade>
+                    <div class="personal-info mb-5">
+                      <div className="contact-info-row d-flex mb-4  ">
+                        <svg width="0" height="0">
+                          <linearGradient
+                            id="purple-gradient"
+                            x1="100%"
+                            y1="100%"
+                            x2="0%"
+                            y2="0%"
+                          >
+                            <stop stopColor="#ab05f2" offset="0%" />
+                            <stop stopColor="#5a13f2" offset="100%" />
+                          </linearGradient>
+                        </svg>
+                        <div>
+                          <MdEmail
+                            className="contact-info-icon"
+                            style={{ fill: "url(#purple-gradient)" }}
+                          />
+                        </div>
+                        <p className="center-vertically">
+                          marti.staykov@gmail.com
+                        </p>
                       </div>
-                      <p className="center-vertically">
-                        marti.staykov@gmail.com
-                      </p>
-                    </div>
 
-                    <div className="contact-info-row d-flex mb-4  ">
-                      <div>
-                        <AiFillPhone
-                          className="contact-info-icon"
-                          style={{ fill: "url(#purple-gradient)" }}
-                        />
+                      <div className="contact-info-row d-flex mb-4  ">
+                        <div>
+                          <AiFillPhone
+                            className="contact-info-icon"
+                            style={{ fill: "url(#purple-gradient)" }}
+                          />
+                        </div>
+                        <p className="center-vertically">+359 88706 6622</p>
                       </div>
-                      <p className="center-vertically">+359 88706 6622</p>
-                    </div>
 
-                    <div className="contact-info-row d-flex mb-4  ">
-                      <div>
-                        <ImLocation2
-                          className="contact-info-icon"
-                          style={{ fill: "url(#purple-gradient)" }}
-                        />
+                      <div className="contact-info-row d-flex mb-4  ">
+                        <div>
+                          <ImLocation2
+                            className="contact-info-icon"
+                            style={{ fill: "url(#purple-gradient)" }}
+                          />
+                        </div>
+                        <p className=" center-vertically">
+                          Eindhoven, The Netherlands
+                        </p>
                       </div>
-                      <p className=" center-vertically">
-                        Eindhoven, The Netherlands
-                      </p>
-                    </div>
 
-                    <div className="contact-info-row d-flex mb-4  ">
-                      <div>
-                        <MdSchool
-                          className="contact-info-icon"
-                          style={{ fill: "url(#purple-gradient)" }}
-                        />
+                      <div className="contact-info-row d-flex mb-4  ">
+                        <div>
+                          <MdSchool
+                            className="contact-info-icon"
+                            style={{ fill: "url(#purple-gradient)" }}
+                          />
+                        </div>
+                        <p className=" center-vertically">
+                          Fontys University of Applied Sciences
+                        </p>
                       </div>
-                      <p className=" center-vertically">
-                        Fontys University of Applied Sciences
-                      </p>
-                    </div>
 
-                    <div className="contact-info-row d-flex mb-4  ">
-                      <div>
-                        <IoIosFlag
-                          className="contact-info-icon"
-                          style={{ fill: "url(#purple-gradient)" }}
-                        />
+                      <div className="contact-info-row d-flex mb-4  ">
+                        <div>
+                          <IoIosFlag
+                            className="contact-info-icon"
+                            style={{ fill: "url(#purple-gradient)" }}
+                          />
+                        </div>
+                        <p className="center-vertically">Bulgarian</p>
                       </div>
-                      <p className="center-vertically">Bulgaria</p>
                     </div>
-                  </div>
+                  </Slide>
 
                   <div class="social-info mb-5">
                     <h3 className="heading-smaller">Social media</h3>
                     <div className="purple-gradient-border-bottom mb-4"></div>
 
-                    <div className=" d-flex justify-content-between">
-                      <a href="#" target="_blank">
-                        <FaGithub
-                          className="contact-info-icon-big"
-                          style={{ fill: "url(#purple-gradient)" }}
-                        />
-                      </a>
-                      <a
-                        href="https://www.facebook.com/martin.staykov.1/about_work_and_education"
-                        target="_blank"
-                      >
-                        <FaFacebookSquare
-                          className="contact-info-icon-big"
-                          style={{ fill: "url(#purple-gradient)" }}
-                        />
-                      </a>
-                      <a
-                        href="https://www.linkedin.com/in/martin-staykov-25993b184/"
-                        target="_blank"
-                      >
-                        <GrLinkedin
-                          className="contact-info-icon-big"
-                          style={{ fill: "url(#purple-gradient)" }}
-                        />
-                      </a>
-                    </div>
+                    <Fade bottom cascade>
+                      <div className=" d-flex justify-content-between">
+                        <a href="#" target="_blank">
+                          <FaGithub
+                            className="contact-info-icon-big"
+                            style={{ fill: "url(#purple-gradient)" }}
+                          />
+                        </a>
+                        <a
+                          href="https://www.facebook.com/martin.staykov.1/about_work_and_education"
+                          target="_blank"
+                        >
+                          <FaFacebookSquare
+                            className="contact-info-icon-big"
+                            style={{ fill: "url(#purple-gradient)" }}
+                          />
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/in/martin-staykov-25993b184/"
+                          target="_blank"
+                        >
+                          <GrLinkedin
+                            className="contact-info-icon-big"
+                            style={{ fill: "url(#purple-gradient)" }}
+                          />
+                        </a>
+                      </div>
+                    </Fade>
                   </div>
                 </div>
               </div>
@@ -140,7 +148,11 @@ const Contact = () => {
                   data-netlify-honeypot="bot-field"
                   onSubmit="submit"
                 >
-                  <input type="hidden" name="form-name" value="contact-me-form" />
+                  <input
+                    type="hidden"
+                    name="form-name"
+                    value="contact-me-form"
+                  />
                   <div className="contact-form-field mb-3">
                     <label className="contact-form-label">Name *</label>
                     <input

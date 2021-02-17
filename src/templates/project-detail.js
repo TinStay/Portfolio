@@ -5,11 +5,13 @@ import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import TechIcon from "../components/Icons/TechIcon"
-
-// import { ReactIcon } from "@react-icons/all-files/fa/FaReact";
-// import { SassIcon } from "@react-icons/all-files/fa/FaSass";
-// import { BootstrapIcon } from "@react-icons/all-files/fa/FaBootstrap";
 import { ReactIcon, SassIcon, BootstrapIcon } from "@react-icons/all-files"
+
+import Bounce from "react-reveal/Bounce"
+import Slide from "react-reveal/Slide"
+import Flip from "react-reveal/Flip"
+import Fade from "react-reveal/Fade"
+import Zoom from 'react-reveal/Zoom';
 
 const ProjectDetail = ({ data }) => {
   const project = data.markdownRemark
@@ -29,16 +31,18 @@ const ProjectDetail = ({ data }) => {
                 {project !== null && project.frontmatter.title}
               </h1>
               {project !== null && project.frontmatter.siteURL != "none" ? (
-                <div className="my-4 my-md-auto">
-                  <a
-                    href={project !== null && project.frontmatter.siteURL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-purple-rounded text-decoration-none py-2 px-3 mx-0 "
-                  >
-                    Visit website
-                  </a>
-                </div>
+                <Flip  right>
+                  <div className="my-4 my-md-auto">
+                    <a
+                      href={project !== null && project.frontmatter.siteURL}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn-purple-rounded text-decoration-none py-2 px-3 mx-0 "
+                    >
+                      Visit website
+                    </a>
+                  </div>
+                </Flip >
               ) : null}
             </div>
             <Carousel
@@ -68,51 +72,61 @@ const ProjectDetail = ({ data }) => {
 
             <div className="row ">
               <div className="project-detail-desc my-4  col-xl-8">
-                <h3 className="heading-smaller ">Description</h3>
-                <div className="purple-gradient-border-bottom  w-centered-xs-lg-90  "></div>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: project !== null && project.html,
-                  }}
-                  className="project-detail-desc-text my-0 line-height"
-                ></div>
+                <Fade bottom>
+                  <h3 className="heading-smaller ">Description</h3>
+                  <div className="purple-gradient-border-bottom  w-centered-xs-lg-90  "></div>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: project !== null && project.html,
+                    }}
+                    className="project-detail-desc-text my-0 line-height"
+                  ></div>
+                </Fade>
               </div>
 
               <div className="project-detail-desc my-4 col-xl-4">
                 <h3 className="heading-smaller">Tech Stack</h3>
                 <div className="purple-gradient-border-bottom  w-centered-xs-lg-90 w-xl-100"></div>
-                <div className="row">
-                  {project.frontmatter.technologies.map((technology, idx) => {
-                    return (
-                      <div
-                        key={idx}
-                        className="col-4 col-md-3 col-xl-4 text-center"
-                      >
-                        <TechIcon name={technology} />
-                      </div>
-                    )
-                  })}
-                </div>
+                <Flip left cascade>
+                  <div className="row">
+                    {project.frontmatter.technologies.map((technology, idx) => {
+                      return (
+                        <div
+                          key={idx}
+                          className="col-4 col-md-3 col-xl-4 text-center"
+                        >
+                          <TechIcon name={technology} />
+                        </div>
+                      )
+                    })}
+                  </div>
+                </Flip>
               </div>
             </div>
             <div className="row">
               <div className="my-4 col-xl-8">
-                <h3 className="heading-smaller">Learning outcome</h3>
-                <div className="purple-gradient-border-bottom w-centered-xs-lg-90   "></div>
-                <p className="line-height">{project.frontmatter.learningOutcome}</p>
+                <Fade bottom>
+                  <h3 className="heading-smaller">Learning outcome</h3>
+                  <div className="purple-gradient-border-bottom w-centered-xs-lg-90   "></div>
+                  <p className="line-height">
+                    {project.frontmatter.learningOutcome}
+                  </p>
+                </Fade>
               </div>
               <div className="my-4 col-xl-4">
                 <div className="mb-4 ">
                   <h3 className="heading-smaller">Github repository</h3>
                   <div className="purple-gradient-border-bottom w-centered-xs-lg-90  w-xl-100"></div>
                 </div>
-                <a
-                  className="btn-purple-rounded d-block d-lg-inline d-xl-block text-center text-decoration-none py-2 px-4 "
-                  target="_blank"
-                  href={project.frontmatter.githubRepo}
-                >
-                  View code
-                </a>
+                <Fade bottom>
+                  <a
+                    className="btn-purple-rounded d-block d-lg-inline d-xl-block text-center text-decoration-none py-2 px-4 "
+                    target="_blank"
+                    href={project.frontmatter.githubRepo}
+                  >
+                    View code
+                  </a>
+                </Fade>
               </div>
             </div>
           </div>

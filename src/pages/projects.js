@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Fade from 'react-reveal/Fade';
 
 const Projects = ({ data }) => {
   return (
@@ -11,6 +12,7 @@ const Projects = ({ data }) => {
       <div className="light-gray-container pt-4 pb-footer">
         <div className="container w-lg-90-centered">
           <h1 className="heading-section text-center">My projects</h1>
+          <Fade right cascade>
           <div className="row project-row equal">
             {data.allMarkdownRemark.edges.map(project => {
               return (
@@ -50,6 +52,7 @@ const Projects = ({ data }) => {
               )
             })}
           </div>
+          </Fade>
         </div>
       </div>
     </Layout>
