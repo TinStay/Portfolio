@@ -269,6 +269,32 @@ header {
   border-bottom: 1px solid rgb(240, 240, 240);
 }
 
+.logo{
+  margin: 0;
+  // width: 100%;
+  height: 74px;
+
+
+  // fill: red;
+  // background-image: url(./images/logoV2.svg);
+  // fill: red;
+
+  // shape-rendering: crispEdges;
+  // background: $dark-purple-main; /* Default color */
+  //   background: -webkit-linear-gradient(
+  //     to right,
+  //     $dark-purple-main,
+  //     $light-purple-main
+  //   ); /* Color for supporter browsers: Chrome 10-25, Safari 5.1-6 */
+  //   background: linear-gradient(
+  //     to right,
+  //     $dark-purple-main,
+  //     $light-purple-main
+  //   );
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+}
+
 .navbar {
   width: 96%;
   margin: 0 auto 0 auto;
@@ -339,7 +365,7 @@ header {
   
   @media screen and (min-width: 992px) {
     margin: 2px 50px 0px 50px;
-    padding: 10px 0;
+    padding: 13px 0;
   }
 
   &:hover {
@@ -1012,8 +1038,8 @@ footer {
 .footer-container {
   width: 86%;
   margin: 0px auto;
-  padding-top: 1.6rem;
-  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.4rem;
 
   @media screen and (min-width: 992px) {
     width: 90%;

@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import NavLink from "./NavLink"
-import Logo from "./logo"
+// import Logo from "./logo"
+import Logo from "../../images/Logo.svg"
 import { Navbar, Nav } from "react-bootstrap"
 import PropTypes from "prop-types"
 import React from "react"
@@ -8,11 +9,29 @@ import { CgMenu } from "react-icons/cg"
 import { IconContext } from "react-icons"
 
 const Header = ({ siteTitle }) => {
+  const logoStyle = {
+    width: "62px",
+    height: "62px",
+    margin: "0 0",
+  }
+
   return (
     <header>
       <Navbar className="navbar py-1 py-lg-0 mt-0" expand="lg">
         <Navbar.Brand href="/" className="py-0">
-          <Logo />
+          <svg width="0" height="0">
+            <linearGradient
+              id="purpleGradient"
+              x1="100%"
+              y1="100%"
+              x2="0%"
+              y2="0%"
+            >
+              <stop stopColor="#ab05f2" offset="0%" />
+              <stop stopColor="#5a13f2" offset="100%" />
+            </linearGradient>
+          </svg>
+          <Logo className="logo" viewBox="0 0 100 94" style={{ fill: "url(#purpleGradient)" }} />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbar-main ">
