@@ -26,7 +26,7 @@ const Contact = () => {
             <div className="row">
               <div className="col-md-5 mx-auto ">
                 <h3 className="heading-smaller">Personal information</h3>
-                <div className="purple-gradient-border-bottom"></div>
+                <div className="purple-gradient-border-bottom mb-3"></div>
 
                 <div className="contact-info-details">
                   <Slide bottom cascade>
@@ -101,7 +101,7 @@ const Contact = () => {
                     </div>
                   </Slide>
 
-                  <div class="social-info mb-5">
+                  <div class="social-info mb-5 mt-5">
                     <h3 className="heading-smaller">Social media</h3>
                     <div className="purple-gradient-border-bottom mb-4"></div>
 
@@ -138,7 +138,7 @@ const Contact = () => {
               </div>
               <div className="col-md-5 mx-auto ">
                 <h3 className="heading-smaller">Send me a message</h3>
-                <div className="purple-gradient-border-bottom"></div>
+                <div className="purple-gradient-border-bottom mb-3"></div>
                 <form
                   id="contact-form"
                   className="contact-form"
