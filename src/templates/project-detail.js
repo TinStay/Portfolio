@@ -5,13 +5,9 @@ import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import TechIcon from "../components/Icons/TechIcon"
-import { ReactIcon, SassIcon, BootstrapIcon } from "@react-icons/all-files"
 
-import Bounce from "react-reveal/Bounce"
-import Slide from "react-reveal/Slide"
 import Flip from "react-reveal/Flip"
 import Fade from "react-reveal/Fade"
-import Zoom from 'react-reveal/Zoom';
 
 const ProjectDetail = ({ data }) => {
   const project = data.markdownRemark
