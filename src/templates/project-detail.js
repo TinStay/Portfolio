@@ -27,7 +27,7 @@ const ProjectDetail = ({ data }) => {
                 {project !== null && project.frontmatter.title}
               </h1>
               {project !== null && project.frontmatter.siteURL != "none" ? (
-                <Flip  right>
+                <Flip right>
                   <div className="my-4 my-md-auto">
                     <a
                       href={project !== null && project.frontmatter.siteURL}
@@ -38,7 +38,7 @@ const ProjectDetail = ({ data }) => {
                       Visit website
                     </a>
                   </div>
-                </Flip >
+                </Flip>
               ) : null}
             </div>
             <Carousel
@@ -68,9 +68,9 @@ const ProjectDetail = ({ data }) => {
 
             <div className="row ">
               <div className="project-detail-desc my-4  col-xl-8">
-                <Fade bottom>
-                  <h3 className="heading-smaller ">Description</h3>
-                  <div className="purple-gradient-border-bottom  w-centered-xs-lg-90  "></div>
+                <h3 className="heading-smaller ">Description</h3>
+                <div className="purple-gradient-border-bottom  w-centered-xs-lg-90  "></div>
+                <Fade left>
                   <div
                     dangerouslySetInnerHTML={{
                       __html: project !== null && project.html,
@@ -83,7 +83,7 @@ const ProjectDetail = ({ data }) => {
               <div className="project-detail-desc my-4 col-xl-4">
                 <h3 className="heading-smaller">Tech Stack</h3>
                 <div className="purple-gradient-border-bottom  w-centered-xs-lg-90 w-xl-100"></div>
-                <Flip left cascade>
+                <Fade right cascade>
                   <div className="row">
                     {project.frontmatter.technologies.map((technology, idx) => {
                       return (
@@ -96,14 +96,14 @@ const ProjectDetail = ({ data }) => {
                       )
                     })}
                   </div>
-                </Flip>
+                </Fade>
               </div>
             </div>
             <div className="row">
               <div className="my-4 col-xl-8">
-                <Fade bottom>
-                  <h3 className="heading-smaller">Learning outcome</h3>
-                  <div className="purple-gradient-border-bottom w-centered-xs-lg-90   "></div>
+                <h3 className="heading-smaller">Learning outcome</h3>
+                <div className="purple-gradient-border-bottom w-centered-xs-lg-90   "></div>
+                <Fade left>
                   <p className="line-height">
                     {project.frontmatter.learningOutcome}
                   </p>
@@ -114,7 +114,7 @@ const ProjectDetail = ({ data }) => {
                   <h3 className="heading-smaller">Github repository</h3>
                   <div className="purple-gradient-border-bottom w-centered-xs-lg-90  w-xl-100"></div>
                 </div>
-                <Fade bottom>
+                <Fade right>
                   <a
                     className="btn-purple-rounded d-block d-lg-inline d-xl-block text-center text-decoration-none py-2 px-4 "
                     target="_blank"
