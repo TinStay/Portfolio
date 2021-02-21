@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import NavLink from "./NavLink"
-// import Logo from "./logo"
 import Logo from "../../images/Logo.svg"
 import { Navbar, Nav } from "react-bootstrap"
 import PropTypes from "prop-types"
