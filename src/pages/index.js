@@ -78,7 +78,7 @@ const IndexPage = ({ data }) => {
         <div className="w-70-centered">
           <h1 className="heading-section text-center">My skills</h1>
           <div className="row mb-6">
-            <h3 className="heading-smaller">Front-end</h3>
+            <h3 className="heading-smaller text-center text-lg-start">Front-end</h3>
             <div className="purple-gradient-border-bottom mb-3"></div>
             <Flip left cascade>
               <div className="d-flex justify-content-around justify-content-sm-start  flex-wrap">
@@ -104,7 +104,7 @@ const IndexPage = ({ data }) => {
             </Flip>
           </div>
           <div className="row mb-6 ">
-            <h3 className="heading-smaller">Back-end</h3>
+            <h3 className="heading-smaller text-center text-lg-start">Back-end</h3>
             <div className="purple-gradient-border-bottom mb-3"></div>
             <Flip left cascade>
               <div className="d-flex justify-content-around justify-content-sm-start flex-wrap">
@@ -128,7 +128,7 @@ const IndexPage = ({ data }) => {
             </Flip>
           </div>
           <div className="row mb-6 ">
-            <h3 className="heading-smaller">Other</h3>
+            <h3 className="heading-smaller text-center text-lg-start">Other</h3>
             <div className="purple-gradient-border-bottom mb-3"></div>
             <Flip left cascade>
               <div className="d-flex justify-content-around justify-content-sm-start flex-wrap">
