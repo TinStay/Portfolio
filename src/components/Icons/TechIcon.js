@@ -1,7 +1,6 @@
 import React from "react"
 import { IconContext } from "react-icons"
-import { SiReactrouter } from "react-icons/si"
-import { SiNetlify } from "react-icons/si"
+import { SiReactrouter, SiGraphql, SiNetlify } from "react-icons/si"
 
 import { OverlayTrigger, Tooltip } from "react-bootstrap"
 
@@ -85,8 +84,8 @@ const TechIcon = ({ tooltip = true, ...props }) => {
       icon = <SiNetlify className="tech-icon netlify-icon" />
       break
 
-    case "Netlify":
-      icon = <SiNetlify className="tech-icon netlify-icon" />
+    case "GraphQL":
+      icon = <SiGraphql className="tech-icon graphql-icon" />
       break
 
     default:
