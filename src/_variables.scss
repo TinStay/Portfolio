@@ -3,7 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+
+@font-face {
+  font-family: 'Brush Script MT';
+  src: url("./static/BRUSHSCI.ttf");
+}
 
 $dark-purple-main: #5a13f2;
 $light-purple-main: #ab05f2;
@@ -13,10 +18,9 @@ $light-purple-main-hover: #a304e7;
 $dark-blue-font: #023e7d;
 $dark-blue-icon: #03045e;
 $default-font-family: "Montserrat", serif;
-$header-font-family: "Brush Script MT","Roboto Slab", cursive;
+$header-font-family: 'Brush Script MT', "Roboto Slab", cursive;
 // $light-gray-bgc: #f8f9fa;
 $light-gray-bgc: #f7f7f8;
-
 
 $zindex-dropdown: 1000;
 $zindex-sticky: 1020;
