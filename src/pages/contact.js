@@ -114,19 +114,19 @@ const Contact = () => {
                           />
                         </a>
                         <a
-                          href="https://www.facebook.com/martin.staykov.1/about_work_and_education"
+                          href="https://www.linkedin.com/in/martin-staykov-25993b184/"
                           target="_blank"
                         >
-                          <FaFacebookSquare
+                          <GrLinkedin
                             className="contact-info-icon-big"
                             style={{ fill: "url(#purple-gradient)" }}
                           />
                         </a>
                         <a
-                          href="https://www.linkedin.com/in/martin-staykov-25993b184/"
+                          href="https://www.facebook.com/martin.staykov.1/about_work_and_education"
                           target="_blank"
                         >
-                          <GrLinkedin
+                          <FaFacebookSquare
                             className="contact-info-icon-big"
                             style={{ fill: "url(#purple-gradient)" }}
                           />
