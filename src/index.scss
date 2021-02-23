@@ -1,5 +1,17 @@
 @import "./variables";
 
+// Text selection
+::-moz-selection { /* Code for Firefox */
+  color: white !important;
+  background: $light-purple-main;
+}
+
+::selection {
+  color: white !important;
+  background: $light-purple-main;
+}
+
+
 /* ##################### */
 /* ### Common classes ### */
 /* ##################### */
