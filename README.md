@@ -1,5 +1,5 @@
 ### Portfolio
-| ----------- |
+
 
 ### Description
 Personal portfolio intended to diplay information about me, my skills and work. A contact form has been added, which sends message entries to my email.  
