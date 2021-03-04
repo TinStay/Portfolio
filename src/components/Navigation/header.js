@@ -8,11 +8,6 @@ import { CgMenu } from "react-icons/cg"
 import { IconContext } from "react-icons"
 
 const Header = ({ siteTitle }) => {
-  const logoStyle = {
-    width: "62px",
-    height: "62px",
-    margin: "0 0",
-  }
 
   return (
     <header>
