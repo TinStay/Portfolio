@@ -5,7 +5,7 @@ siteURL: ""
 githubRepo: "https://github.com/TinStay/AdWeDo"
 technologies: ["React", "Redux", "Firebase", "Sass"]
 shortDescription: "Run and manage your social media advertising campaigns."
-learningOutcome: "WeFontys was one of the first big group projects that I worked on in Fontys and it helped me understand more about group work and dynamics. Although I was the only person developing the application, planning and performing user testing on it was a collaborative work which gave me many new insights on how to communicate and present ideas to other people. WeFontys was not only a great way to improve my backend skills using Firebase services but it was also a great experience for designing a simple and intuitive UI.  "
+learningOutcome: "Building the ad campaign form has been a great exercise for handling state and errors. In order to build a better user interaction, I made use of many React libraries and APIs and integrating them into my application often lead to issues in my code. Dealing with those problems has brought to light many holes in my knowledge and also helped me understand more about the components I was trying to build."
 mainImage: "../../images/AdWeDo/01.png"
 position: "0"
 ---
