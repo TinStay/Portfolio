@@ -107,7 +107,7 @@ const Contact = () => {
 
                     <Fade bottom cascade>
                       <div className=" d-flex justify-content-between">
-                        <a href="#" target="_blank">
+                        <a href="https://github.com/TinStay" target="_blank">
                           <FaGithub
                             className="contact-info-icon-big"
                             style={{ fill: "url(#purple-gradient)" }}
