@@ -1,7 +1,7 @@
 ---
 title: "AdWeDo"
 path: "/adwedo"
-siteURL: ""
+siteURL: "none"
 githubRepo: "https://github.com/TinStay/AdWeDo"
 technologies: ["React", "Redux", "Firebase", "Sass"]
 shortDescription: "Run and manage your social media advertising campaigns."
