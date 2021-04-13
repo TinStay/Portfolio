@@ -19,7 +19,8 @@ const IndexPage = ({ data }) => {
     <TechIcon name="React" />,
     <TechIcon name="Redux" />,
     <TechIcon name="Gatsby" />,
-    <TechIcon name="Sass" />,
+    <TechIcon name="Next.js" />,
+    
   ]
 
   const backendIcons = [
@@ -29,10 +30,11 @@ const IndexPage = ({ data }) => {
   ]
 
   const otherIcons = [
+    <TechIcon name="Sass" />,
     <TechIcon name="GraphQL" />,
     <TechIcon name="React Router" />,
     <TechIcon name="Netlify" />,
-    <TechIcon name="Heroku" />,
+    <TechIcon name="Material-UI" />,
     <TechIcon name="npm" />,
     <TechIcon name="Adobe Photoshop" />,
     <TechIcon name="Adobe Experience Design" />,
