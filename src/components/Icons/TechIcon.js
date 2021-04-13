@@ -1,5 +1,4 @@
 import React from "react"
-import { IconContext } from "react-icons"
 import { SiReactrouter, SiGraphql, SiNetlify, SiNextDotJs } from "react-icons/si"
 
 import { OverlayTrigger, Tooltip } from "react-bootstrap"

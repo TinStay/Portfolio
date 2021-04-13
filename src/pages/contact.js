@@ -2,18 +2,14 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { IconContext } from "react-icons"
-
 import { MdEmail, MdSchool } from "react-icons/md"
 import { AiFillPhone } from "react-icons/ai"
 import { ImLocation2 } from "react-icons/im"
-import { FaGithub, FaFacebookSquare, FaFlag } from "react-icons/fa"
+import { FaGithub, FaFacebookSquare, FaRegIdCard } from "react-icons/fa"
 import { GrLinkedin } from "react-icons/gr"
-import { IoIosFlag } from "react-icons/io"
 
 import Slide from "react-reveal/Slide"
 import Fade from "react-reveal/Fade"
-import Pulse from "react-reveal/Pulse"
 
 const Contact = () => {
   return (
@@ -31,6 +27,15 @@ const Contact = () => {
                 <div className="contact-info-details">
                   <Slide bottom cascade>
                     <div class="personal-info mb-5">
+                    <div className="contact-info-row d-flex mb-4  ">
+                        <div>
+                          <FaRegIdCard
+                            className="contact-info-icon"
+                            style={{ fill: "url(#purple-gradient)" }}
+                          />
+                        </div>
+                        <p className="center-vertically">Martin Staykov</p>
+                      </div>
                       <div className="contact-info-row d-flex mb-4  ">
                         <svg width="0" height="0">
                           <linearGradient
@@ -89,15 +94,7 @@ const Contact = () => {
                         </p>
                       </div>
 
-                      <div className="contact-info-row d-flex mb-4  ">
-                        <div>
-                          <IoIosFlag
-                            className="contact-info-icon"
-                            style={{ fill: "url(#purple-gradient)" }}
-                          />
-                        </div>
-                        <p className="center-vertically">Bulgarian</p>
-                      </div>
+                      
                     </div>
                   </Slide>
 
