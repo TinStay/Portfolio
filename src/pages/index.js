@@ -179,7 +179,7 @@ const IndexPage = ({ data }) => {
               <Fade right>
                 <p className="blue-font line-height w-lg-90  mb-3">
                   Designing and building web applications has been my passion
-                  for the past 2 years. Learning-By-Doing, in my opinion, is the
+                  for the past 3 years. Learning-By-Doing, in my opinion, is the
                   most effective way for acquiring new knowledge as a new
                   developer and that is why I focus on building end-to-end web
                   apps.
