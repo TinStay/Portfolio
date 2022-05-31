@@ -1,12 +1,20 @@
 import React from "react"
-import { SiReactrouter, SiGraphql, SiNetlify, SiNextDotJs } from "react-icons/si"
-
+import {
+  SiReactrouter,
+  SiGraphql,
+  SiNetlify,
+  SiNextDotJs,
+  SiTailwindcss,
+} from "react-icons/si"
 import { OverlayTrigger, Tooltip } from "react-bootstrap"
 
 const TechIcon = ({ tooltip = true, ...props }) => {
   let icon = null
 
   switch (props.name) {
+    case "Golang":
+      icon = <i class="devicon-go-plain golang-icon tech-icon"></i>
+      break
     case "React":
       icon = <i className="devicon-react-original tech-icon colored"> </i>
       break
@@ -95,6 +103,18 @@ const TechIcon = ({ tooltip = true, ...props }) => {
       icon = <SiNextDotJs className=" tech-icon "></SiNextDotJs>
       break
 
+    case "TailwindCSS":
+      icon = (
+        <SiTailwindcss className=" tech-icon tailwind-icon"></SiTailwindcss>
+      )
+      break
+
+ 
+
+    // case "Mantine":
+    //   icon = <MantineLogo className=" tech-icon tailwind-icon"></MantineLogo>
+    //   break
+
     default:
       break
   }
@@ -118,7 +138,7 @@ const TechIcon = ({ tooltip = true, ...props }) => {
           {icon}
         </OverlayTrigger>
       )
-    }else{
+    } else {
       return icon
     }
   } else return null
