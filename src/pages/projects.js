@@ -61,7 +61,7 @@ const Projects = ({ data }) => {
 
 export const pageQuery = graphql`
   {
-    allMarkdownRemark(sort: { fields: frontmatter___position, order: ASC }) {
+    allMarkdownRemark(sort: { fields: frontmatter___position, order: DESC }) {
       edges {
         node {
           id
