@@ -5,6 +5,7 @@ import {
   SiNetlify,
   SiNextDotJs,
   SiTailwindcss,
+  SiSolidity
 } from "react-icons/si"
 import { OverlayTrigger, Tooltip } from "react-bootstrap"
 
@@ -104,23 +105,34 @@ const TechIcon = ({ tooltip = true, ...props }) => {
       break
 
     case "TailwindCSS":
-      icon = (
-        <SiTailwindcss className=" tech-icon tailwind-icon"></SiTailwindcss>
-      )
+      icon = <SiTailwindcss className="tech-icon tailwind-icon"></SiTailwindcss>
       break
 
- 
+    case "Solidity":
+      icon = (
+        <SiSolidity class="tech-icon"></SiSolidity>
+      )
+      // icon = (
+      //   <img
+      //     alt="solidity"
+      //     className="tech-icon-img "
+      //     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg"
+      //   />
+      // )
 
-    // case "Mantine":
-    //   icon = <MantineLogo className=" tech-icon tailwind-icon"></MantineLogo>
-    //   break
+      break
+
+    case "Typescript":
+      icon = <i class="tech-icon devicon-typescript-plain"></i>
+      break
 
     default:
+      icon = null
       break
   }
 
   if (icon !== null) {
-    if (tooltip == true) {
+    if (tooltip === true) {
       return (
         <OverlayTrigger
           key={props.name}
