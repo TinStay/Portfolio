@@ -1,7 +1,6 @@
 ---
 title: "WeFontys"
 path: "/wefontys"
-mediaFile: "WeFontysMedia"
 siteURL: "https://wefontys.web.app/"
 githubRepo: "https://github.com/TinStay/DRAMS-group"
 technologies: ["React", "Bootstrap", "Firebase", "Sass"]

@@ -1,7 +1,6 @@
 ---
 title: "GetWeather"
 path: "/getweather"
-mediaFile: "GetWeatherMedia"
 siteURL: "none"
 githubRepo: "https://github.com/TinStay/GetWeather"
 technologies: ["React", "Redux", "Bootstrap"]

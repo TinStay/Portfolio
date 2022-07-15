@@ -1,7 +1,6 @@
 ---
 title: "AdWeDo"
 path: "/adwedo"
-mediaFile: "AdWeDoMedia"
 siteURL: "none"
 githubRepo: "https://github.com/TinStay/AdWeDo"
 technologies: ["React", "Redux", "Firebase", "Sass"]

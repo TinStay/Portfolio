@@ -1,7 +1,6 @@
 ---
 title: "Workon"
 path: "/workon"
-mediaFile: "WorkonMedia"
 siteURL: "https://workon-tin.web.app/"
 githubRepo: "https://github.com/TinStay/workon"
 technologies: ["React", "TailwindCSS"]

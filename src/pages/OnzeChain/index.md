@@ -1,7 +1,6 @@
 ---
 title: "OnzeChain"
 path: "/onzechain"
-mediaFile: "OnzeChainMedia"
 siteURL: "none"
 githubRepo: "https://github.com/OnzeChain"
 technologies: ["React", "Typescript",  "Material-UI"]

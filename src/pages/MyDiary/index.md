@@ -1,7 +1,6 @@
 ---
 title: "MyDiary"
 path: "/diary"
-mediaFile: "MyDiaryMedia"
 siteURL: "none"
 githubRepo: "https://github.com/TinStay/Django-Diary-App"
 technologies: ["Django", "Bootstrap", "Css"]

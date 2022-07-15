@@ -1,7 +1,6 @@
 ---
 title: "TastyBurger"
 path: "/tastyburger"
-mediaFile: "TastyBurgerMedia"
 siteURL: "none"
 githubRepo: "https://github.com/TinStay/TastyBurger"
 technologies: ["React", "Bootstrap", "Firebase", "React Router"]

@@ -1,7 +1,6 @@
 ---
 title: "MovieDB"
 path: "/moviedb"
-mediaFile: "MovieDBMedia"
 siteURL: "none"
 githubRepo: "https://github.com/TinStay/MovieDB"
 technologies: ["React", "Bootstrap", "React Router"]

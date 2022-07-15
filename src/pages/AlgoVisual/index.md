@@ -1,7 +1,6 @@
 ---
 title: "AlgoVisual"
 path: "/algovisual"
-mediaFile: "AlgoVisualMedia"
 siteURL: "https://algovisual-tinstay.web.app/"
 githubRepo: "https://github.com/TinStay/AlgoVisual"
 technologies: ["React", "Sass", "Bootstrap", "JavaScript"]
