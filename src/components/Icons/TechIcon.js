@@ -5,7 +5,6 @@ import {
   SiNetlify,
   SiNextDotJs,
   SiTailwindcss,
-  SiSolidity
 } from "react-icons/si"
 import { OverlayTrigger, Tooltip } from "react-bootstrap"
 
@@ -108,19 +107,6 @@ const TechIcon = ({ tooltip = true, ...props }) => {
       icon = <SiTailwindcss className="tech-icon tailwind-icon"></SiTailwindcss>
       break
 
-    case "Solidity":
-      icon = (
-        <SiSolidity class="tech-icon"></SiSolidity>
-      )
-      // icon = (
-      //   <img
-      //     alt="solidity"
-      //     className="tech-icon-img "
-      //     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg"
-      //   />
-      // )
-
-      break
 
     case "Typescript":
       icon = <i class="tech-icon devicon-typescript-plain"></i>
