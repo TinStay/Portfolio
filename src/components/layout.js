@@ -56,6 +56,7 @@ const Layout = ({ children }) => {
                 className="footer-icon"
                 href="https://github.com/TinStay"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FaGithub />
               </a>
@@ -63,6 +64,7 @@ const Layout = ({ children }) => {
                 className="footer-icon"
                 href="https://www.linkedin.com/in/martin-staykov-25993b184/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <GrLinkedin />
               </a>
@@ -70,6 +72,7 @@ const Layout = ({ children }) => {
                 className="footer-icon"
                 href="https://www.facebook.com/martin.staykov.1/about_work_and_education"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FaFacebookSquare />
               </a>
@@ -77,6 +80,7 @@ const Layout = ({ children }) => {
                 className="footer-icon"
                 href="https://www.instagram.com/martino_stay/"
                 target="_blank"
+                 rel="noreferrer"
               >
                 <i className="fa fa fa-instagram "></i>
               </a>
@@ -84,6 +88,7 @@ const Layout = ({ children }) => {
                 className="footer-icon"
                 href="https://twitter.com/MindFuckerHD"
                 target="_blank"
+                 rel="noreferrer"
               >
                 <i className="fa fa-twitter "></i>
               </a> */}

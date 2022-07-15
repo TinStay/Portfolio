@@ -4,8 +4,6 @@ import Logo from "../../images/Logo.svg"
 import { Navbar, Nav } from "react-bootstrap"
 import PropTypes from "prop-types"
 import React from "react"
-import { CgMenu } from "react-icons/cg"
-import { IconContext } from "react-icons"
 
 const Header = ({ siteTitle }) => {
 

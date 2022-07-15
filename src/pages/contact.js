@@ -104,7 +104,7 @@ const Contact = () => {
 
                     <Fade bottom cascade>
                       <div className=" d-flex justify-content-between">
-                        <a href="https://github.com/TinStay" target="_blank">
+                        <a href="https://github.com/TinStay" target="_blank"  rel="noreferrer">
                           <FaGithub
                             className="contact-info-icon-big"
                             style={{ fill: "url(#purple-gradient)" }}
@@ -113,6 +113,7 @@ const Contact = () => {
                         <a
                           href="https://www.linkedin.com/in/martin-staykov-25993b184/"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <GrLinkedin
                             className="contact-info-icon-big"
@@ -122,6 +123,7 @@ const Contact = () => {
                         <a
                           href="https://www.facebook.com/martin.staykov.1/about_work_and_education"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <FaFacebookSquare
                             className="contact-info-icon-big"
@@ -151,8 +153,9 @@ const Contact = () => {
                     value="contact-me-form"
                   />
                   <div className="contact-form-field mb-3">
-                    <label className="contact-form-label">Name *</label>
+                    <label className="contact-form-label" htmlFor="name">Name *</label>
                     <input
+                    id="name"
                       className="contact-form-input"
                       name="name"
                       type="text"
@@ -161,8 +164,9 @@ const Contact = () => {
                     />
                   </div>
                   <div className="contact-form-field mb-3">
-                    <label className="contact-form-label">Email *</label>
+                    <label className="contact-form-label" htmlFor="email">Email *</label>
                     <input
+                      id="email"
                       className="contact-form-input"
                       name="email"
                       type="email"
@@ -171,8 +175,9 @@ const Contact = () => {
                     />
                   </div>
                   <div className="contact-form-field mb-3">
-                    <label className="contact-form-label">Message *</label>
+                    <label className="contact-form-label" htmlFor="message">Message *</label>
                     <textarea
+                      id="message"
                       className="contact-form-input"
                       name="message"
                       placeholder="Enter your message"

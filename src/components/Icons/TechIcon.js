@@ -109,7 +109,7 @@ const TechIcon = ({ tooltip = true, ...props }) => {
 
 
     case "Typescript":
-      icon = <i class="tech-icon devicon-typescript-plain"></i>
+      icon = <i className="tech-icon  typescript-icon devicon-typescript-plain"></i>
       break
 
     default:

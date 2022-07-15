@@ -1,6 +1,5 @@
 import React from "react"
 import { Carousel } from "react-bootstrap"
-import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
@@ -26,7 +25,7 @@ const ProjectDetail = ({ data }) => {
               <h1 className="heading-project-detail">
                 {project !== null && project.frontmatter.title}
               </h1>
-              {project !== null && project.frontmatter.siteURL != "none" ? (
+              {project !== null && project.frontmatter.siteURL !=="none" ? (
                 <Flip right>
                   <div className="my-4 my-md-auto">
                     <a
@@ -118,6 +117,7 @@ const ProjectDetail = ({ data }) => {
                   <a
                     className="btn-purple-rounded d-block d-lg-inline d-xl-block text-center text-decoration-none py-2 px-4 "
                     target="_blank"
+                    rel="noreferrer"
                     href={project.frontmatter.githubRepo}
                   >
                     View code
@@ -143,14 +143,6 @@ export const pageQuery = graphql`
         githubRepo
         technologies
         learningOutcome
-        shortDescription
-        mainImage {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
     allFile(
@@ -173,62 +165,3 @@ export const pageQuery = graphql`
 
 export default ProjectDetail
 
-{
-  /* <button
-              className="btn btn-link d-lg-none dark-blue-font no-outline"
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#carouselModal"
-            >
-              View fullscreen
-            </button>
-            <div
-              className="modal fade"
-              id="carouselModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div className="modal-dialog modal-fullscreen">
-                <div className="modal-content">
-                  <div className="modal-header">
-                    <h5 className="modal-title" id="exampleModalLabel">
-                      {project !== null && project.frontmatter.title}
-                    </h5>
-                    <button
-                      type="button"
-                      className="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div className="modal-body">
-                    <Carousel
-                      className="carousel-container mb-0"
-                      fade={true}
-                      indicators={false}
-                      nextLabel=""
-                      prevLabel=""
-                    >
-                      {images.length > 0 &&
-                        images.map((image, idx) => {
-                          if (image.node.childImageSharp !== null) {
-                            return (
-                              <Carousel.Item key={idx}>
-                                <Img
-                                  className="carousel-image"
-                                  fluid={image.node.childImageSharp.fluid}
-                                  alt="website"
-                                />
-                              </Carousel.Item>
-                            )
-                          } else {
-                            return null
-                          }
-                        })}
-                    </Carousel>
-                  </div>
-                </div>
-              </div>
-            </div> */
-}
