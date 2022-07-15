@@ -36,7 +36,7 @@ exports.createPages = async ({ actions, graphql }) => {
           createPage({
               path: node.frontmatter.path,
               context: {
-                title: node.frontmatter.title
+                title: node.frontmatter.title + "Media"
               },
               component: projectTemplate
           })

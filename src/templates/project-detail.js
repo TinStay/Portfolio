@@ -25,7 +25,7 @@ const ProjectDetail = ({ data }) => {
               <h1 className="heading-project-detail">
                 {project !== null && project.frontmatter.title}
               </h1>
-              {project !== null && project.frontmatter.siteURL !=="none" ? (
+              {project !== null && project.frontmatter.siteURL !== "none" ? (
                 <Flip right>
                   <div className="my-4 my-md-auto">
                     <a
