@@ -1,6 +1,6 @@
 ---
 title: "Grab&Go"
-path: "/grab&go"
+path: "/grabandgo"
 siteURL: "none"
 githubRepo: "https://github.com/TinStay/Grab-and-Go"
 technologies: ["Next.js", "Material-UI", "Sass"]
