@@ -13,12 +13,7 @@ exports.createPages = async ({ actions, graphql }) => {
             html
             frontmatter {
               title
-              technologies
-              siteURL
-              shortDescription
               path
-              githubRepo
-              position
             }
             
           }

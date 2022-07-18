@@ -3,9 +3,9 @@ import {
   SiReactrouter,
   SiGraphql,
   SiNetlify,
-  SiNextDotJs,
   SiTailwindcss,
 } from "react-icons/si"
+import {TbBrandNextjs} from "react-icons/tb"
 import { OverlayTrigger, Tooltip } from "react-bootstrap"
 
 const TechIcon = ({ tooltip = true, ...props }) => {
@@ -100,7 +100,7 @@ const TechIcon = ({ tooltip = true, ...props }) => {
       break
 
     case "Next.js":
-      icon = <SiNextDotJs className=" tech-icon "></SiNextDotJs>
+      icon = <TbBrandNextjs  className="nextjs-icon"></TbBrandNextjs>
       break
 
     case "TailwindCSS":
