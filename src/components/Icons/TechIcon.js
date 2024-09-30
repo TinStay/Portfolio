@@ -4,9 +4,14 @@ import {
   SiGraphql,
   SiNetlify,
   SiTailwindcss,
+  SiMantine ,
+  SiJira,
 } from "react-icons/si"
+import { RiSupabaseFill } from "react-icons/ri";
 import {TbBrandNextjs} from "react-icons/tb"
 import { OverlayTrigger, Tooltip } from "react-bootstrap"
+import { CgFigma } from "react-icons/cg";
+import { SiYarn } from "react-icons/si";
 
 const TechIcon = ({ tooltip = true, ...props }) => {
   let icon = null
@@ -106,10 +111,27 @@ const TechIcon = ({ tooltip = true, ...props }) => {
     case "TailwindCSS":
       icon = <SiTailwindcss className="tech-icon tailwind-icon"></SiTailwindcss>
       break
+    case "Supabase":
+      icon = <RiSupabaseFill  className="tech-icon supabase-icon"></RiSupabaseFill>
+      break
+    case "Mantine":
+      icon = <SiMantine className="tech-icon mantine-icon"></SiMantine>
+      break
 
 
     case "Typescript":
       icon = <i className="tech-icon  typescript-icon devicon-typescript-plain"></i>
+      break
+
+    case "Jira":
+      icon = <SiJira  className="tech-icon jira-icon"></SiJira>
+      break
+
+    case "Figma":
+      icon = <CgFigma  className="tech-icon"></CgFigma>
+      break
+    case "yarn":
+      icon = <SiYarn  className="tech-icon yarn-icon"></SiYarn>
       break
 
     default:

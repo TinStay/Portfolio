@@ -16,12 +16,14 @@ const IndexPage = ({ data }) => {
     <TechIcon name="CSS" />,
     <TechIcon name="Bootstrap" />,
     <TechIcon name="JavaScript" />,
+    <TechIcon name="Typescript" />,
     <TechIcon name="React" />,
+    <TechIcon name="Next.js" />,
     <TechIcon name="Redux" />,
     <TechIcon name="Gatsby" />,
-    <TechIcon name="Next.js" />,
     <TechIcon name="TailwindCSS" />,
-    // <TechIcon name="Mantine" />,
+    <TechIcon name="Mantine" />,
+    <TechIcon name="Material-UI" />,
     
   ]
 
@@ -30,17 +32,19 @@ const IndexPage = ({ data }) => {
     <TechIcon name="Python" />,
     <TechIcon name="Django" />,
     <TechIcon name="Firebase" />,
+    <TechIcon name="Supabase" />,
   ]
 
   const otherIcons = [
-    <TechIcon name="Sass" />,
     <TechIcon name="GraphQL" />,
+    <TechIcon name="Jira" />,
+    <TechIcon name="Figma" />,
+    <TechIcon name="Adobe Experience Design" />,
     <TechIcon name="React Router" />,
     <TechIcon name="Netlify" />,
-    <TechIcon name="Material-UI" />,
+    <TechIcon name="Sass" />,
     <TechIcon name="npm" />,
-    <TechIcon name="Adobe Photoshop" />,
-    <TechIcon name="Adobe Experience Design" />,
+    <TechIcon name="yarn" />,
   ]
 
   return (
@@ -50,21 +54,21 @@ const IndexPage = ({ data }) => {
         <div className=" w-lg-70-centered">
           <div className="row">
             <div className="profile-image-container col-lg-6 order-lg-2 px-0">
-              <div className="profile-image-circle">
-                <Img
+              {/* <div className="profile-image-circle"> */}
+                <Img 
                   className="profile-image"
                   fluid={data.tinstayImage.childImageSharp.fluid}
                   alt="Tin Stay"
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="main-text col-lg-6 order-lg-1 px-0">
               <Pulse>
                 <h1 className="heading-tin-stay mx-auto">Tin Stay</h1>
               </Pulse>
               <div class="secondary-text">
-                <h2 className="heading-small">A Web developer</h2>
-                <h2 className="heading-small">and a problem solver</h2>
+                <h2 className="heading-small">Web Developer & Visionary</h2>
+                <h2 className="heading-small"></h2>
               </div>
               <Slide bottom cascade>
                 <div className="jumbotron-buttons d-flex justify-content-center">
@@ -92,7 +96,7 @@ const IndexPage = ({ data }) => {
                   return (
                     <div
                       key={idx}
-                      className="me-2 me-sm-3 me-lg-4 me-xl-auto mb-2 "
+                      className="me-2 me-sm-3 me-lg-5 me-xl-4 mb-2 "
                     >
                       {/* <ScrollAnimation
                       animateIn="flipInY"
@@ -183,7 +187,7 @@ const IndexPage = ({ data }) => {
               <Fade right>
                 <p className="blue-font line-height w-lg-90  mb-3">
                   Designing and building web applications has been my passion
-                  for the past 4 years. Learning-By-Doing, in my opinion, is the
+                  for the past 6 years. Learning-By-Doing, in my opinion, is the
                   most effective way for acquiring new knowledge as a new
                   developer and that is why I focus on building end-to-end web
                   apps.
@@ -254,7 +258,7 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query homepageImages {
-    tinstayImage: file(relativePath: { eq: "Home/tinstay.jpg" }) {
+    tinstayImage: file(relativePath: { eq: "Home/MS Profile.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

@@ -49,9 +49,9 @@ const Contact = () => {
                             <stop stopColor="#5a13f2" offset="100%" />
                           </linearGradient>
                         </svg>
-                        <div>
+                        <div className="white-font">
                           <MdEmail
-                            className="contact-info-icon"
+                            className="contact-info-icon white-font"
                             style={{ fill: "url(#purple-gradient)" }}
                           />
                         </div>

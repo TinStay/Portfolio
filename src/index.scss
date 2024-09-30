@@ -187,6 +187,9 @@ p{
   color: $dark-blue-font;
 }
 
+.white-font {
+  color: white;
+}
 .line-height {
   line-height: 2rem;
 }
@@ -652,16 +655,18 @@ header {
 }
 
 .profile-image {
-  width: 160px;
-  height: 145px;
+  margin: auto auto;
+  max-width: 60%;
+  max-height: 100%;
   padding: 4px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
-  border-radius: 50%;
+  border-radius: 36%;
   background-size: cover;
 
   @media screen and (min-width: 992px) {
-    width: inherit;
-    height: inherit;
+    max-width: 330px;
+    max-height: 330px;
   }
 
   @media screen and (min-width: 1199px) {
@@ -860,8 +865,21 @@ header {
    }
 }
 
+.mantine-icon {
+  color: #339af0 !important;
+}
+
 .typescript-icon {
   color: #0076c6 !important;
+}
+.jira-icon {
+  color: #0c66e4 !important;
+}
+.supabase-icon {
+  color: #3ecf8e !important;
+}
+.yarn-icon {
+  color: #2c8ebb !important;
 }
 
 .golang-icon {
@@ -935,7 +953,7 @@ header {
 .contact-info-icon {
   font-size: 1.8rem !important;
   margin-right: 13px;
-  background: $dark-purple-main; /* Default color */
+  background: white; /* Default color */
   background: -webkit-linear-gradient(
     to right,
     $dark-purple-main,

@@ -43,13 +43,13 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer>
           <div className="footer-container d-md-flex justify-content-between">
-            <div className="mb-4 mb-md-0">
-              <p className="small-icon mb-3">
-                <MdEmail /> <span className="text-small">marti.staykov@gmail.com</span> 
+            <div className="mb-4 mb-md-0 white-font">
+              <p className="small-icon mb-3 ">
+                <MdEmail className="white-font"/> <span className="text-small white-font">marti.staykov@gmail.com</span> 
               </p>
               <p className="small-icon mb-3">
-                <AiFillPhone /> <span className="text-small">+359 88706 6622</span> 
-              </p>
+                <AiFillPhone  className="white-font"/> <span className="text-small white-font">+359 88706 6622</span> 
+              </p> 
             </div>
             <div className="d-flex justify-content-between text-center">
               <a
@@ -58,7 +58,7 @@ const Layout = ({ children }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaGithub />
+                <FaGithub  className="white-font"/>
               </a>
               <a
                 className="footer-icon"
@@ -66,7 +66,7 @@ const Layout = ({ children }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <GrLinkedin />
+                <GrLinkedin  className="white-font"/>
               </a>
               <a
                 className="footer-icon"
@@ -74,7 +74,7 @@ const Layout = ({ children }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaFacebookSquare />
+                <FaFacebookSquare  className="white-font"/>
               </a>
               {/* <a
                 className="footer-icon"
